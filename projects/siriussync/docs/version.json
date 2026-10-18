@@ -2,6 +2,6 @@
     "latest_version": "1.5.4",
     "mandatory": true,
     "download_url_win": "https://github.com/Coder-ACJHP/siriussync-releases/releases/download/v1.5.4/SiriusSync.ITS-1.5.4.msi",
-    "download_url_mac": "",
+    "download_url_mac": "https://github.com/Coder-ACJHP/siriussync-releases/releases/download/v1.5.4/SiriusSync.ITS-1.5.4.dmg",
     "changelog": "Login ekranı beni hatırla özelliği, kullanıcılar için profil kartından şifre yenileme, tüm modüller için gerekli alanlar kontrolü, şirket bilgileri senkronizasyon düzeltmesi ve performans iyileştirmeleri."
 }
