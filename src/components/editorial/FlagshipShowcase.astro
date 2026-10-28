@@ -7,12 +7,12 @@ const { lang = 'en' } = Astro.props;
 
 const t = {
   en: {
-    sectionNum: '01 / FLAGSHIP ARCHITECTURES',
-    headline: 'Enterprise systems & flagship software.',
-    desc: 'Deep-dive explorations into bespoke desktop enterprise platforms and native Apple utilities built with zero compromise.',
-    caseStudyBtn: 'Read Deep Case Study →',
-    siriusSyncTitle: 'SiriusSync ITS — Next-Gen Enterprise Desktop ERP',
-    siriusSyncTag: 'FLAGSHIP • v1.5.5 PRODUCTION',
+    sectionNum: '01 / FEATURED PROJECTS',
+    headline: 'Selected works and production software.',
+    desc: 'Thoughtfully engineered solutions for desktop and mobile, built for real users and mission-critical workflows.',
+    caseStudyBtn: 'View Project Details →',
+    siriusSyncTitle: 'SiriusSync ITS — Yeni Nesil Masaüstü ERP',
+    siriusSyncTag: 'DESKTOP ERP • v1.5.5',
     siriusSyncDesc:
       'Engineered with JavaFX, modern reactive pipelines, Bcrypt encryption, and Supabase PostgreSQL with strict Row Level Security (RLS). Delivers real-time multi-terminal inventory synchronization, automated purchase and sales order lifecycles (POM/SOM), integrated CRM, and hardware-bound license verification.',
     standbyTitle: 'StandBy Clock — Minimalist Nightstand Experience',
@@ -21,12 +21,12 @@ const t = {
       'Curated bedside utility featuring 14+ bespoke clock faces, fluid gesture-driven navigation, localized weather data, and low-latency rendering tailored for OLED nightstand ergonomics.',
   },
   tr: {
-    sectionNum: '01 / AMİRAL GEMİSİ MİMARİLER',
-    headline: 'Kurumsal sistemler ve amiral gemisi yazılımlar.',
-    desc: 'Tavizsiz bir mühendislik anlayışıyla geliştirilmiş masaüstü kurumsal sistemlerin ve native Apple çözümlerinin derinlemesine incelemesi.',
-    caseStudyBtn: 'Kapsamlı Case Study’yi Oku →',
-    siriusSyncTitle: 'SiriusSync ITS — Yeni Nesil Masaüstü Kurumsal ERP',
-    siriusSyncTag: 'AMİRAL GEMİSİ • v1.5.5 CANLI SÜRÜM',
+    sectionNum: '01 / ÖNE ÇIKAN ÇALIŞMALAR',
+    headline: 'Geliştirdiğim seçkin projeler ve yazılımlar.',
+    desc: 'Kullanıcı odaklı, dayanıklı ve gerçek dünya iş akışları için özenle tasarladığım masaüstü ve mobil sistemler.',
+    caseStudyBtn: 'Proje Detaylarını İncele →',
+    siriusSyncTitle: 'SiriusSync ITS — Yeni Nesil Masaüstü ERP',
+    siriusSyncTag: 'MASAÜSTÜ ERP • v1.5.5 CANLI',
     siriusSyncDesc:
       'JavaFX, reaktif veri akışları, Bcrypt şifreleme ve Supabase PostgreSQL (RLS politikaları) ile sıfırdan geliştirildi. Çok terminalli gerçek zamanlı envanter senkronizasyonu, POM/SOM sipariş döngüleri, entegre CRM ve donanım kimlikli (HWID) kurumsal lisans yönetimi sunar.',
     standbyTitle: 'StandBy Clock — Minimalist Masaüstü Gece Saati',
@@ -40,63 +40,63 @@ const siriusSyncLink = lang === 'en' ? '/works/siriussync' : '/tr/works/siriussy
 const standbyLink = lang === 'en' ? '/works/standby' : '/tr/works/standby';
 ---
 
-<section id="siriussync" class="py-24 px-6 md:px-12 hairline-b">
+<section id="works" class="py-24 px-6 md:px-12 border-b border-blue-500/15 bg-[#07090e]">
   <div class="max-w-6xl mx-auto">
     <!-- Header -->
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
       <div>
-        <span class="text-xs font-mono tracking-widest text-zinc-500 uppercase block mb-3">
+        <span class="text-xs font-mono tracking-widest text-blue-400 font-semibold uppercase block mb-3">
           {t.sectionNum}
         </span>
-        <h2 class="text-3xl sm:text-5xl font-editorial tracking-tight text-white max-w-xl leading-none">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white max-w-xl leading-tight">
           {t.headline}
         </h2>
       </div>
-      <p class="text-sm text-zinc-400 max-w-md font-light leading-relaxed">
+      <p class="text-sm text-zinc-400 max-w-md font-normal leading-relaxed">
         {t.desc}
       </p>
     </div>
 
     <!-- Flagship 1: SiriusSync ITS -->
-    <div class="mb-16 rounded-3xl hairline bg-[#08080a] p-6 md:p-10 relative overflow-hidden group">
+    <div class="mb-14 rounded-3xl border border-blue-500/25 bg-gradient-to-br from-[#0d1424] via-[#090d16] to-[#07090e] p-6 md:p-10 relative overflow-hidden group glow-card">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         <div class="lg:col-span-7 space-y-6">
           <div class="flex flex-wrap items-center gap-3">
-            <span class="px-3 py-1 rounded-full text-[11px] font-mono tracking-wider bg-white text-black font-semibold">
+            <span class="px-3 py-1 rounded-full text-xs font-mono tracking-wider bg-blue-600 text-white font-semibold shadow-md shadow-blue-500/20">
               {t.siriusSyncTag}
             </span>
-            <span class="text-xs font-mono text-zinc-500">
+            <span class="text-xs font-mono text-cyan-400">
               macOS & Windows Cross-Platform
             </span>
           </div>
 
-          <h3 class="text-2xl sm:text-4xl font-editorial tracking-tight text-white leading-tight">
+          <h3 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-white leading-tight">
             {t.siriusSyncTitle}
           </h3>
 
-          <p class="text-sm sm:text-base text-zinc-400 font-light leading-relaxed">
+          <p class="text-sm sm:text-base text-zinc-300 font-normal leading-relaxed">
             {t.siriusSyncDesc}
           </p>
 
-          <div class="flex flex-wrap gap-2 text-xs font-mono text-zinc-400 pt-2">
-            <span class="px-3 py-1.5 rounded-lg hairline bg-zinc-950">Java 21 / JavaFX</span>
-            <span class="px-3 py-1.5 rounded-lg hairline bg-zinc-950">Supabase Realtime</span>
-            <span class="px-3 py-1.5 rounded-lg hairline bg-zinc-950">PostgreSQL + RLS</span>
-            <span class="px-3 py-1.5 rounded-lg hairline bg-zinc-950">Bcrypt Security</span>
-            <span class="px-3 py-1.5 rounded-lg hairline bg-zinc-950">Maven Modular</span>
+          <div class="flex flex-wrap gap-2 text-xs font-mono text-zinc-300 pt-2">
+            <span class="px-3 py-1.5 rounded-lg border border-zinc-700 bg-zinc-900/80">Java 21 / JavaFX</span>
+            <span class="px-3 py-1.5 rounded-lg border border-blue-500/30 bg-blue-950/40 text-blue-300">Supabase Realtime</span>
+            <span class="px-3 py-1.5 rounded-lg border border-zinc-700 bg-zinc-900/80">PostgreSQL + RLS</span>
+            <span class="px-3 py-1.5 rounded-lg border border-zinc-700 bg-zinc-900/80">Bcrypt Security</span>
+            <span class="px-3 py-1.5 rounded-lg border border-zinc-700 bg-zinc-900/80">Maven Modular</span>
           </div>
 
           <div class="pt-4 flex flex-wrap items-center gap-4">
             <a
               href={siriusSyncLink}
-              class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-mono uppercase tracking-wider bg-white text-black hover:bg-zinc-200 transition-all font-semibold"
+              class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-mono uppercase tracking-wider bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-600/30 transition-all font-bold"
             >
               <span>{t.caseStudyBtn}</span>
             </a>
             <a
               href="/projects/siriussync/docs/change-log.html"
               target="_blank"
-              class="inline-flex items-center gap-2 px-5 py-3 rounded-full text-xs font-mono uppercase tracking-wider hairline text-zinc-400 hover:text-white transition-colors"
+              class="inline-flex items-center gap-2 px-5 py-3 rounded-full text-xs font-mono uppercase tracking-wider border border-zinc-700 text-zinc-300 hover:text-white hover:border-zinc-500 transition-colors"
             >
               <span>Changelog v1.5.5</span>
             </a>
@@ -104,7 +104,7 @@ const standbyLink = lang === 'en' ? '/works/standby' : '/tr/works/standby';
         </div>
 
         <div class="lg:col-span-5">
-          <a href={siriusSyncLink} class="block editorial-img-container rounded-2xl hairline bg-zinc-950 p-2 shadow-2xl">
+          <a href={siriusSyncLink} class="block editorial-img-container rounded-2xl border border-zinc-800 bg-zinc-950 p-2 shadow-2xl">
             <img
               src="/assets/images/siriussync.png"
               alt="SiriusSync ITS Architecture"
@@ -116,10 +116,10 @@ const standbyLink = lang === 'en' ? '/works/standby' : '/tr/works/standby';
     </div>
 
     <!-- Flagship 2: StandBy Clock -->
-    <div class="rounded-3xl hairline bg-[#08080a] p-6 md:p-10 relative overflow-hidden group">
+    <div class="rounded-3xl border border-zinc-800 bg-[#0a0e18] p-6 md:p-10 relative overflow-hidden group glow-card">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         <div class="lg:col-span-5 order-2 lg:order-1">
-          <a href={standbyLink} class="block editorial-img-container rounded-2xl hairline bg-zinc-950 p-2 shadow-2xl">
+          <a href={standbyLink} class="block editorial-img-container rounded-2xl border border-zinc-800 bg-zinc-950 p-2 shadow-2xl">
             <img
               src="/assets/images/standby.jpg"
               alt="StandBy Clock"
@@ -130,34 +130,34 @@ const standbyLink = lang === 'en' ? '/works/standby' : '/tr/works/standby';
 
         <div class="lg:col-span-7 space-y-6 order-1 lg:order-2">
           <div class="flex flex-wrap items-center gap-3">
-            <span class="px-3 py-1 rounded-full text-[11px] font-mono tracking-wider bg-zinc-800 text-zinc-200 font-semibold hairline">
+            <span class="px-3 py-1 rounded-full text-xs font-mono tracking-wider bg-zinc-800 text-cyan-300 font-semibold border border-cyan-500/30">
               {t.standbyTag}
             </span>
-            <span class="text-xs font-mono text-zinc-500">
-              +14 Bespoke Display Interfaces
+            <span class="text-xs font-mono text-zinc-400">
+              +14 Özel Saat Teması
             </span>
           </div>
 
-          <h3 class="text-2xl sm:text-4xl font-editorial tracking-tight text-white leading-tight">
+          <h3 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-white leading-tight">
             {t.standbyTitle}
           </h3>
 
-          <p class="text-sm sm:text-base text-zinc-400 font-light leading-relaxed">
+          <p class="text-sm sm:text-base text-zinc-300 font-normal leading-relaxed">
             {t.standbyDesc}
           </p>
 
-          <div class="flex flex-wrap gap-2 text-xs font-mono text-zinc-400 pt-2">
-            <span class="px-3 py-1.5 rounded-lg hairline bg-zinc-950">Swift 5.9</span>
-            <span class="px-3 py-1.5 rounded-lg hairline bg-zinc-950">SwiftUI</span>
-            <span class="px-3 py-1.5 rounded-lg hairline bg-zinc-950">UIKit Animation</span>
-            <span class="px-3 py-1.5 rounded-lg hairline bg-zinc-950">CoreLocation</span>
-            <span class="px-3 py-1.5 rounded-lg hairline bg-zinc-950">OLED Dark Optimization</span>
+          <div class="flex flex-wrap gap-2 text-xs font-mono text-zinc-300 pt-2">
+            <span class="px-3 py-1.5 rounded-lg border border-zinc-700 bg-zinc-900/80">Swift 5.9</span>
+            <span class="px-3 py-1.5 rounded-lg border border-zinc-700 bg-zinc-900/80">SwiftUI</span>
+            <span class="px-3 py-1.5 rounded-lg border border-zinc-700 bg-zinc-900/80">UIKit Animation</span>
+            <span class="px-3 py-1.5 rounded-lg border border-zinc-700 bg-zinc-900/80">CoreLocation</span>
+            <span class="px-3 py-1.5 rounded-lg border border-zinc-700 bg-zinc-900/80">OLED Dark Optimization</span>
           </div>
 
           <div class="pt-4">
             <a
               href={standbyLink}
-              class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-mono uppercase tracking-wider bg-white text-black hover:bg-zinc-200 transition-all font-semibold"
+              class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-mono uppercase tracking-wider bg-white hover:bg-zinc-200 text-black shadow-md transition-all font-bold"
             >
               <span>{t.caseStudyBtn}</span>
             </a>
@@ -167,4 +167,3 @@ const standbyLink = lang === 'en' ? '/works/standby' : '/tr/works/standby';
     </div>
   </div>
 </section>
-

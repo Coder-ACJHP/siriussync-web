@@ -8,7 +8,6 @@ export default function FluidCanvas() {
     const container = mountRef.current;
     if (!container) return;
 
-    // Check if WebGL is supported
     const canvas = document.createElement('canvas');
     const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
     if (!gl) return;
@@ -32,11 +31,11 @@ export default function FluidCanvas() {
     renderer.setClearColor(0x000000, 0);
     container.appendChild(renderer.domElement);
 
-    // Grid of particles with wave oscillation
     const rows = 45;
     const cols = 70;
     const numParticles = rows * cols;
     const positions = new Float32Array(numParticles * 3);
+    const colors = new Float32Array(numParticles * 3);
     const originalPositions = new Float32Array(numParticles * 3);
 
     let idx = 0;
@@ -44,6 +43,9 @@ export default function FluidCanvas() {
     const spacingY = 3.2;
     const offsetX = (cols * spacingX) / 2;
     const offsetY = (rows * spacingY) / 2;
+
+    const colorBlue = new THREE.Color(0x3b82f6);
+    const colorCyan = new THREE.Color(0x06b6d4);
 
     for (let i = 0; i < rows; i++) {
       for (let j = 0; j < cols; j++) {
@@ -58,19 +60,26 @@ export default function FluidCanvas() {
         originalPositions[idx * 3] = x;
         originalPositions[idx * 3 + 1] = y;
         originalPositions[idx * 3 + 2] = z;
+
+        // Gradient from cyan to blue
+        const mixedColor = colorCyan.clone().lerp(colorBlue, (j / cols) * 0.8 + (i / rows) * 0.2);
+        colors[idx * 3] = mixedColor.r;
+        colors[idx * 3 + 1] = mixedColor.g;
+        colors[idx * 3 + 2] = mixedColor.b;
+
         idx++;
       }
     }
 
     const geometry = new THREE.BufferGeometry();
     geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
 
-    // Monochrome high-end minimalist particle shader/material
     const material = new THREE.PointsMaterial({
-      color: 0x71717a, // subtle zinc-500
-      size: 1.8,
+      size: 2.0,
+      vertexColors: true,
       transparent: true,
-      opacity: 0.38,
+      opacity: 0.55,
       blending: THREE.AdditiveBlending,
     });
 
@@ -81,8 +90,8 @@ export default function FluidCanvas() {
       const rect = container.getBoundingClientRect();
       const clientX = e.clientX - rect.left;
       const clientY = e.clientY - rect.top;
-      targetX = (clientX / width - 0.5) * 50;
-      targetY = (clientY / height - 0.5) * -40;
+      targetX = (clientX / width - 0.5) * 55;
+      targetY = (clientY / height - 0.5) * -45;
     };
 
     window.addEventListener('mousemove', onMouseMove, { passive: true });
@@ -98,18 +107,17 @@ export default function FluidCanvas() {
 
     window.addEventListener('resize', onResize);
 
-    let clock = new THREE.Clock();
+    const clock = new THREE.Clock();
 
     const animate = () => {
       animationFrameId = requestAnimationFrame(animate);
       const elapsedTime = clock.getElapsedTime();
 
-      // Smooth mouse follow
       mouseX += (targetX - mouseX) * 0.04;
       mouseY += (targetY - mouseY) * 0.04;
 
-      camera.position.x = mouseX * 0.4;
-      camera.position.y = mouseY * 0.4;
+      camera.position.x = mouseX * 0.35;
+      camera.position.y = mouseY * 0.35;
       camera.lookAt(0, 0, 0);
 
       const pos = geometry.attributes.position.array as Float32Array;
@@ -119,12 +127,11 @@ export default function FluidCanvas() {
         const ox = originalPositions[i3];
         const oy = originalPositions[i3 + 1];
 
-        // Organic fluid wave math
-        const wave = Math.sin(ox * 0.05 + elapsedTime * 1.2) * Math.cos(oy * 0.05 + elapsedTime * 1.0) * 8;
+        const wave = Math.sin(ox * 0.05 + elapsedTime * 1.3) * Math.cos(oy * 0.05 + elapsedTime * 1.1) * 8.5;
         const mouseDist = Math.sqrt((ox - mouseX) ** 2 + (oy - mouseY) ** 2);
-        const mouseEffect = Math.max(0, 25 - mouseDist * 0.4);
+        const mouseEffect = Math.max(0, 26 - mouseDist * 0.4);
 
-        pos[i3 + 2] = wave + mouseEffect * 0.8;
+        pos[i3 + 2] = wave + mouseEffect * 0.85;
       }
 
       geometry.attributes.position.needsUpdate = true;
@@ -149,9 +156,8 @@ export default function FluidCanvas() {
   return (
     <div
       ref={mountRef}
-      className="absolute inset-0 pointer-events-none z-0 overflow-hidden opacity-70"
+      className="absolute inset-0 pointer-events-none z-0 overflow-hidden opacity-80"
       aria-hidden="true"
     />
   );
 }
-
