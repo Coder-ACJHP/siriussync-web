@@ -20,7 +20,8 @@ const t = {
         desc: 'Intelligent on-device storage optimization utilizing pHash perceptual hashing and Apple Vision framework to detect duplicate media, compress bloated albums, and restore storage safely.',
         stack: ['Swift', 'Vision Framework', 'pHash Algorithm', 'RevenueCat', 'StoreKit 2'],
         image: '/assets/images/cleanjet.png',
-        link: 'https://apps.apple.com/developer/onur-isik',
+        link: 'https://apps.apple.com/us/app/cleanjet-ai-phone-cleaner/id6749763106',
+        btnText: 'View on App Store',
       },
       {
         title: 'Anylight AI Photo Editor',
@@ -28,7 +29,8 @@ const t = {
         desc: 'High-performance native iOS photo editor combining Apple CoreML neural models and custom OpenCV shaders for neural relighting, real-time exposure balance, and artifact elimination.',
         stack: ['UIKit', 'CoreML', 'OpenCV', 'CoreImage', 'Alamofire'],
         image: '/assets/images/anylight.png',
-        link: 'https://apps.apple.com/developer/onur-isik',
+        link: 'https://apps.apple.com/us/app/anylight-ai-photo-editor/id1523192876',
+        btnText: 'View on App Store',
       },
       {
         title: 'Babybell — Pregnancy & Health Tracking',
@@ -36,7 +38,8 @@ const t = {
         desc: 'Comprehensive pregnancy tracking companion providing weekly fetal growth analytics, clinical vital metric logging, and seamless multimedia playback for expectant families.',
         stack: ['UIKit', 'Alamofire', 'AVKit', 'CoreData', 'Local Notifications'],
         image: '/assets/images/babybell.png',
-        link: 'https://apps.apple.com/developer/onur-isik',
+        link: 'https://babybell.app/',
+        btnText: 'Visit babybell.app',
       },
     ],
   },
@@ -52,7 +55,8 @@ const t = {
         desc: 'Apple Vision framework ve pHash algoritmalarını cihaz üzerinde çalıştırarak benzer/kopya fotoğrafları tespit eden, depolamayı güvenle optimize eden akıllı analiz aracı.',
         stack: ['Swift', 'Vision Framework', 'pHash Algoritması', 'RevenueCat', 'StoreKit 2'],
         image: '/assets/images/cleanjet.png',
-        link: 'https://apps.apple.com/developer/onur-isik',
+        link: 'https://apps.apple.com/us/app/cleanjet-ai-phone-cleaner/id6749763106',
+        btnText: 'App Store’da İncele',
       },
       {
         title: 'Anylight AI Photo Editor',
@@ -60,7 +64,8 @@ const t = {
         desc: 'CoreML sinir ağı modelleri ve optimize edilmiş OpenCV filtreleri ile fotoğraflarda yapay ışıklandırma, dinamik pozlama ve doku temizliği sağlayan native iOS stüdyosu.',
         stack: ['UIKit', 'CoreML', 'OpenCV', 'CoreImage', 'Alamofire'],
         image: '/assets/images/anylight.png',
-        link: 'https://apps.apple.com/developer/onur-isik',
+        link: 'https://apps.apple.com/us/app/anylight-ai-photo-editor/id1523192876',
+        btnText: 'App Store’da İncele',
       },
       {
         title: 'Babybell — Gebelik & Sağlık Takibi',
@@ -68,7 +73,8 @@ const t = {
         desc: 'Hamilelik süreci boyunca haftalık bebek gelişimini görselleştiren, sağlık ölçümlerini kayıt altına alan ve uzman rehberliği sunan kapsamlı takip platformu.',
         stack: ['UIKit', 'Alamofire', 'AVKit', 'CoreData', 'Yerel Bildirimler'],
         image: '/assets/images/babybell.png',
-        link: 'https://apps.apple.com/developer/onur-isik',
+        link: 'https://babybell.app/',
+        btnText: 'babybell.app’i Ziyaret Et',
       },
     ],
   },
@@ -130,7 +136,7 @@ const t = {
                   rel="noopener noreferrer"
                   class="inline-flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-blue-400 hover:text-cyan-300 transition-colors pt-3 border-t border-zinc-800 w-full justify-between font-bold"
                 >
-                  <span>{t.viewAppStore}</span>
+                  <span>{app.btnText || t.viewAppStore}</span>
                   <ArrowUpRight className="w-4 h-4 text-blue-400" />
                 </a>
               </div>

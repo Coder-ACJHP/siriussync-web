@@ -12,31 +12,62 @@ const t = {
     desc: 'Battle-tested across 11+ years of software development. Pragmatic, framework-agnostic problem solving across mobile, desktop, and web ecosystems.',
     pillars: [
       {
-        category: 'MOBILE DEVELOPMENT',
-        desc: 'Native iOS & Cross-Platform Mobile',
-        skills: ['iOS (Swift, SwiftUI, UIKit)', 'Android (Kotlin, Java)', 'CoreML & Apple Vision', 'StoreKit & In-App Purchases', 'App Store & Play Store Lifecycle'],
-        badge: 'PRIMARY',
+        category: 'MOBILE APPS',
+        desc: 'For iPhone and Android, from your idea to the store launch',
+        skills: [
+          'Education, Entertainment, Productivity',
+          'Travel (Location and Maps)',
+          'Social Networking (Messaging)',
+          'Health and Fitness',
+          'Assistants and Helpers',
+          'Payments, Subscriptions, Notifications',
+          'Publishing Process',
+        ],
+        badge: 'Mobile',
         color: 'text-blue-400 border-blue-500/30 bg-blue-500/10',
       },
       {
-        category: 'DESKTOP SYSTEMS',
-        desc: 'macOS & Windows Architecture',
-        skills: ['Java 17/21 LTS & JavaFX', 'Cross-Platform UI/UX', 'JPackage Native Installers (.dmg, .msi)', 'Hardware Licensing (HWID)', 'Modular Maven Lifecycle'],
-        badge: 'SECONDARY',
+        category: 'DESKTOP SOFTWARE',
+        desc: 'Solutions for macOS and Windows',
+        skills: [
+          'Inventory and Stock Tracking',
+          'Customer Relationship Management (CRM)',
+          'Productivity',
+          'Task Management',
+          'Progress Tracking',
+          'Tools That Make Your Work Easier',
+          'Modular, Cross-Platform',
+        ],
+        badge: 'Desktop',
         color: 'text-cyan-400 border-cyan-500/30 bg-cyan-500/10',
       },
       {
-        category: 'MODERN WEB & APIS',
-        desc: 'Scalable Full-Stack Engineering',
-        skills: ['Modern Frontend Frameworks', 'RESTful API & WebSockets', 'High-Performance Static / SSR', 'Micro-Interactions & Motion', 'Cloudflare Edge Infrastructure'],
-        badge: 'EXPANDED',
+        category: 'WEBSITE & WEB APP',
+        desc: 'Fast, secure web solutions built to grow with you',
+        skills: [
+          'Business Sites, Personal Sites, Portfolios',
+          'Online Ordering & Sales (WhatsApp orders, QR menus)',
+          'Admin Dashboards (products, orders, customers)',
+          'User Accounts & Login',
+          'Fast-Loading, Mobile-Friendly Design',
+          'Smooth Animations & Modern Interface',
+          'Domain, Hosting & Launch',
+        ],
+        badge: 'Web',
         color: 'text-emerald-400 border-emerald-500/30 bg-emerald-500/10',
       },
       {
-        category: 'CLOUD & PERSISTENCE',
-        desc: 'Data Reliability & Security Posture',
-        skills: ['Supabase Cloud & Realtime', 'PostgreSQL & RLS Policies', 'Bcrypt Encryption & Auth', 'Firebase Infrastructure', 'Relational Schema Design'],
-        badge: 'SECURE',
+        category: 'CLOUD & DATA SECURITY',
+        desc: 'Your data stays safe and up to date on every device',
+        skills: [
+          'Real-Time Sync Across Phone, Tablet and Computer',
+          'Secure Login & Password Protection',
+          'Role-Based Access (everyone sees only what they’re allowed to)',
+          'Reliable Data Storage',
+          'Infrastructure That Grows With Your Users',
+          'Supabase, Firebase, SQLite, MySQL',
+        ],
+        badge: 'Cloud & Security',
         color: 'text-indigo-400 border-indigo-500/30 bg-indigo-500/10',
       },
     ],
@@ -47,31 +78,62 @@ const t = {
     desc: '11 yılı aşkın yazılım tecrübesiyle pekiştirilmiş; dil ve teknoloji taraftarlığından uzak, probleme en doğru aracı seçen pragmatik mühendislik yaklaşımı.',
     pillars: [
       {
-        category: 'MOBİL GELİŞTİRME',
-        desc: 'Native iOS ve Android Uygulamaları',
-        skills: ['iOS (Swift, SwiftUI, UIKit)', 'Android (Kotlin, Java)', 'CoreML & Apple Vision', 'StoreKit & Abonelik Sistemleri', 'App Store & Play Store Dağıtımı'],
-        badge: 'ASIL BRANŞ',
+        category: 'MOBİL UYGULAMA',
+        desc: 'iPhone ve Android için, fikrinizden mağazada yayına kadar',
+        skills: [
+          'Eğitim, Eğlence, Üretkenlik',
+          'Seyahat (Konum ve Harita)',
+          'Sosyal Ağ (Mesajlaşma)',
+          'Sağlık ve Fitness',
+          'Asistan, Yardımcılar',
+          'Ödeme, Abonelik, Bildirimler',
+          'Yayınlama Süreci',
+        ],
+        badge: 'Mobil',
         color: 'text-blue-400 border-blue-500/30 bg-blue-500/10',
       },
       {
         category: 'MASAÜSTÜ YAZILIM',
-        desc: 'macOS ve Windows Kurumsal Çözümler',
-        skills: ['Java 17/21 LTS & JavaFX', 'Çapraz Platform GUI Mimarisi', 'Native Paketleme (.dmg, .msi)', 'Donanım Lisanslama (HWID)', 'Maven Modüler Derleme'],
-        badge: '2. BRANŞ',
+        desc: 'MacOS ve Windows için çözümler',
+        skills: [
+          'Envanter, Stok Takip',
+          'Müşteri İlişkileri Yönetimi',
+          'Üretkenlik',
+          'Görev Yönetimi',
+          'İlerleme İzleme',
+          'İşinizi Kolaylaştıran',
+          'Modüler, Çapraz Platform',
+        ],
+        badge: 'Masaüstü',
         color: 'text-cyan-400 border-cyan-500/30 bg-cyan-500/10',
       },
       {
-        category: 'MODERN WEB & API',
-        desc: 'Ölçeklenebilir Web Mimarileri',
-        skills: ['Modern Web Arayüzleri', 'RESTful API & WebSocket', 'Yüksek Performanslı Web Çözümleri', 'Mikro-Etkileşim & Animasyon', 'Cloudflare Edge Altyapısı'],
-        badge: 'GENİŞ KAPSAM',
+        category: 'WEB SİTESİ VE UYGULAMA',
+        desc: 'Hızlı, güvenli, büyümeye hazır web çözümleri',
+        skills: [
+          'Kurumsal Site, Kişisel Site, Portfolyo',
+          'Online Sipariş ve Satış Sitesi (WhatsApp’a sipariş, QR menü)',
+          'Yönetim Paneli (ürün, sipariş, müşteri takibi)',
+          'Üyelik ve Giriş Sistemi',
+          'Hızlı Açılan, Telefonda Kusursuz Görünen Tasarım',
+          'Akıcı Animasyonlar ve Modern Arayüz',
+          'Alan Adı, Barındırma ve Yayına Alma',
+        ],
+        badge: 'Web',
         color: 'text-emerald-400 border-emerald-500/30 bg-emerald-500/10',
       },
       {
-        category: 'VERİTABANI & BULUT',
-        desc: 'Veri Güvenliği ve Altyapı',
-        skills: ['Supabase Cloud & Realtime', 'PostgreSQL & RLS Güvenlik İlkeleri', 'Bcrypt Şifreleme & Kimlik', 'Firebase Entegrasyonları', 'İlişkisel Veri Modelleme'],
-        badge: 'GÜVENLİ',
+        category: 'BULUT VE VERİ GÜVENLİĞİ',
+        desc: 'Verileriniz güvende, her cihazda anında güncel',
+        skills: [
+          'Telefon, Tablet ve Bilgisayar Arasında Anlık Senkronizasyon',
+          'Güvenli Giriş ve Şifre Koruması',
+          'Kullanıcıya Özel Veri Erişimi (herkes sadece kendi yetkisi dahilindekini görür)',
+          'Düzenli ve Güvenilir Veri Saklama',
+          'Kullanıcı Sayınız Arttıkça Büyüyen Altyapı',
+          'Supabase, Firebase, SQLite, MySQL',
+        ],
+        badge: 'Bulut ve Güvenlik',
         color: 'text-indigo-400 border-indigo-500/30 bg-indigo-500/10',
       },
     ],
@@ -97,29 +159,29 @@ const t = {
     </div>
 
     <!-- Pillars Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
       {
         t.pillars.map((pillar) => (
-          <div class="p-6 sm:p-8 rounded-3xl border border-zinc-800 bg-[#0c121e] flex flex-col justify-between h-full glow-card">
+          <div class="p-5 sm:p-6 rounded-3xl border border-zinc-800 bg-[#0c121e] flex flex-col h-full glow-card">
             <div>
-              <div class="flex justify-between items-center mb-4">
+              <div class="flex justify-between items-center mb-3">
                 <span class={`text-[10px] font-mono tracking-widest uppercase px-2.5 py-1 rounded-full border ${pillar.color} font-bold`}>
                   {pillar.badge}
                 </span>
                 <span class="w-2 h-2 rounded-full bg-blue-500/60"></span>
               </div>
-              <h3 class="text-lg font-bold text-white tracking-tight mb-1">
+              <h3 class="text-sm sm:text-[15px] font-bold text-white tracking-tight mb-1.5 whitespace-nowrap">
                 {pillar.category}
               </h3>
-              <p class="text-xs text-zinc-400 mb-6 font-mono">
+              <p class="text-xs text-zinc-400 font-mono h-10 leading-5 mb-4 line-clamp-2">
                 {pillar.desc}
               </p>
             </div>
 
-            <ul class="space-y-3 pt-4 border-t border-zinc-800/80">
+            <ul class="space-y-2.5 pt-4 border-t border-zinc-800/80">
               {pillar.skills.map((skill) => (
-                <li class="text-xs font-mono text-zinc-300 flex items-center gap-2">
-                  <span class="text-blue-400">›</span>
+                <li class="text-xs font-mono text-zinc-300 flex items-start gap-2">
+                  <span class="text-blue-400 shrink-0 mt-0.5">›</span>
                   <span>{skill}</span>
                 </li>
               ))}
