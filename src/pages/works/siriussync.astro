@@ -1,0 +1,172 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/editorial/Header.astro';
+import Footer from '../../components/editorial/Footer.astro';
+import { Download, ArrowLeft, Shield, Database, Cpu, Lock, CheckCircle2 } from 'lucide-react';
+
+const winUrl = 'https://github.com/Coder-ACJHP/siriussync-releases/releases/download/v1.5.5/SiriusSync.ITS-1.5.5.msi';
+const macUrl = 'https://github.com/Coder-ACJHP/siriussync-releases/releases/download/v1.5.5/SiriusSync.ITS-1.5.5.dmg';
+---
+
+<BaseLayout
+  lang="en"
+  title="SiriusSync ITS — Flagship Enterprise Case Study | Onur Işık"
+  description="In-depth architectural breakdown of SiriusSync ITS: A reactive enterprise desktop ERP powered by JavaFX and Supabase Realtime."
+>
+  <Header lang="en" currentSlug="siriussync" />
+
+  <main class="py-16 md:py-24 px-6 md:px-12">
+    <div class="max-w-5xl mx-auto">
+      <!-- Breadcrumb / Back Link -->
+      <a href="/#siriussync" class="inline-flex items-center gap-2 text-xs font-mono tracking-widest text-zinc-500 hover:text-white uppercase mb-8 transition-colors">
+        <ArrowLeft className="w-3.5 h-3.5" />
+        <span>Return to Studio Overview</span>
+      </a>
+
+      <!-- Case Study Hero -->
+      <div class="mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-white text-black font-semibold uppercase tracking-wider mb-6">
+          <span>FLAGSHIP ARCHITECTURE • v1.5.5</span>
+        </div>
+        <h1 class="text-4xl sm:text-6xl md:text-7xl font-editorial tracking-tight text-white leading-tight mb-6">
+          SiriusSync ITS: High-Concurrency Enterprise Desktop ERP
+        </h1>
+        <p class="text-lg md:text-xl text-zinc-400 font-light max-w-3xl leading-relaxed">
+          Engineered to bridge deterministic desktop reliability with cloud elasticity. SiriusSync ITS provides real-time multi-terminal inventory synchronization, unified CRM contact lifecycles, and cryptographic license verification.
+        </p>
+      </div>
+
+      <!-- Quick Metrics Strip -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-6 rounded-2xl hairline bg-[#08080a] mb-12 text-xs font-mono">
+        <div>
+          <span class="text-zinc-500 uppercase block mb-1">RUNTIME</span>
+          <span class="text-white font-bold">Java 21 LTS (Modular)</span>
+        </div>
+        <div>
+          <span class="text-zinc-500 uppercase block mb-1">DATABASE</span>
+          <span class="text-white font-bold">Supabase Realtime Postgres</span>
+        </div>
+        <div>
+          <span class="text-zinc-500 uppercase block mb-1">SECURITY</span>
+          <span class="text-white font-bold">Bcrypt + RLS Policies</span>
+        </div>
+        <div>
+          <span class="text-zinc-500 uppercase block mb-1">PLATFORMS</span>
+          <span class="text-white font-bold">macOS & Windows</span>
+        </div>
+      </div>
+
+      <!-- Hero Image -->
+      <div class="rounded-3xl hairline overflow-hidden bg-zinc-950 p-3 mb-16 shadow-2xl">
+        <img
+          src="/assets/images/siriussync.png"
+          alt="SiriusSync ITS Interface"
+          class="w-full h-auto rounded-2xl object-cover"
+        />
+      </div>
+
+      <!-- Executive Overview -->
+      <div class="space-y-16">
+        <section class="hairline-t pt-12">
+          <span class="text-xs font-mono uppercase tracking-widest text-zinc-500 block mb-3">01 / PROBLEM STATEMENT</span>
+          <h2 class="text-2xl sm:text-3xl font-editorial text-white mb-4">
+            The Latency and Isolation Dilemma in Modern ERPs
+          </h2>
+          <p class="text-sm sm:text-base text-zinc-400 font-light leading-relaxed mb-6">
+            Traditional web ERP systems suffer from high UI latency, connection instability during high-frequency barcode scanning, and unpredictable DOM redraw overhead. Conversely, legacy desktop software creates data silos that fail to synchronize across distributed warehouses in real-time.
+          </p>
+          <p class="text-sm sm:text-base text-zinc-400 font-light leading-relaxed">
+            SiriusSync ITS was engineered from first principles using JavaFX and Supabase Realtime to deliver zero-friction native execution speed with sub-50ms distributed database updates across all concurrent terminals.
+          </p>
+        </section>
+
+        <!-- Technical Modules Grid -->
+        <section class="hairline-t pt-12">
+          <span class="text-xs font-mono uppercase tracking-widest text-zinc-500 block mb-3">02 / CORE SUBSYSTEMS</span>
+          <h2 class="text-2xl sm:text-3xl font-editorial text-white mb-8">
+            Architectural Modules & Lifecycle Pipelines
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="p-6 rounded-2xl hairline bg-[#08080a] space-y-3">
+              <div class="w-10 h-10 rounded-xl hairline flex items-center justify-center bg-zinc-900 text-white">
+                <Database className="w-5 h-5 text-emerald-400" />
+              </div>
+              <h3 class="text-lg font-mono font-bold text-white">Real-Time Inventory Synchronization</h3>
+              <p class="text-xs text-zinc-400 font-light leading-relaxed">
+                Persistent WebSocket subscriptions with Supabase PostgreSQL broadcast inventory quantity changes and state updates immediately across all active warehouse workstations without manual refreshes.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-2xl hairline bg-[#08080a] space-y-3">
+              <div class="w-10 h-10 rounded-xl hairline flex items-center justify-center bg-zinc-900 text-white">
+                <Cpu className="w-5 h-5 text-blue-400" />
+              </div>
+              <h3 class="text-lg font-mono font-bold text-white">POM & SOM Lifecycle Pipelines</h3>
+              <p class="text-xs text-zinc-400 font-light leading-relaxed">
+                Full-cycle Purchase Order Management (POM) and Sales Order Management (SOM) workflows, featuring cost-sheet calculation, automated receipt processing, and accounting balance reconciliation.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-2xl hairline bg-[#08080a] space-y-3">
+              <div class="w-10 h-10 rounded-xl hairline flex items-center justify-center bg-zinc-900 text-white">
+                <Lock className="w-5 h-5 text-indigo-400" />
+              </div>
+              <h3 class="text-lg font-mono font-bold text-white">Hardware-Bound (HWID) Licensing</h3>
+              <p class="text-xs text-zinc-400 font-light leading-relaxed">
+                Cryptographic hardware fingerprinting binds installations to authorized workstations. Licenses and enabled feature modules can be managed dynamically in real-time via the integrated admin portal.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-2xl hairline bg-[#08080a] space-y-3">
+              <div class="w-10 h-10 rounded-xl hairline flex items-center justify-center bg-zinc-900 text-white">
+                <Shield className="w-5 h-5 text-amber-400" />
+              </div>
+              <h3 class="text-lg font-mono font-bold text-white">Strict Row Level Security (RLS)</h3>
+              <p class="text-xs text-zinc-400 font-light leading-relaxed">
+                PostgreSQL policies enforce strict multi-tenant boundary checks directly at the database engine level, ensuring zero cross-tenant contamination even across complex concurrent queries.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Live Version & Production Artifacts -->
+        <section class="hairline-t pt-12 pb-8">
+          <div class="p-8 md:p-12 rounded-3xl hairline bg-[#08080a] flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+            <div class="space-y-3">
+              <span class="text-xs font-mono uppercase tracking-widest text-emerald-400 font-semibold block">
+                PRODUCTION ARTIFACTS • v1.5.5
+              </span>
+              <h3 class="text-2xl sm:text-3xl font-editorial text-white">
+                Deploy SiriusSync ITS in Production
+              </h3>
+              <p class="text-xs sm:text-sm text-zinc-400 font-light max-w-xl">
+                Ready for deployment on Windows (.msi) and macOS (.dmg). Auto-startup capabilities, configurable workspace preferences, and integrated documentation included.
+              </p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto shrink-0">
+              <a
+                href={winUrl}
+                class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-xs font-mono uppercase tracking-wider bg-white text-black hover:bg-zinc-200 transition-all font-semibold"
+              >
+                <Download className="w-4 h-4" />
+                <span>Download for Windows</span>
+              </a>
+              <a
+                href={macUrl}
+                class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-xs font-mono uppercase tracking-wider hairline text-zinc-300 hover:text-white hover:border-white/40 transition-all font-medium"
+              >
+                <Download className="w-4 h-4" />
+                <span>Download for macOS</span>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <Footer lang="en" />
+</BaseLayout>
+

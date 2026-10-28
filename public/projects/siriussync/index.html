@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiriusSync ITS - Yeni Nesil Masaüstü ERP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#111827',    // gray-900 (portfolio bg)
+                            card: '#1f2937',    // gray-800 (portfolio card)
+                            primary: '#3b82f6', // blue-500
+                            accent: '#06b6d4',  // cyan-500
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- İkonlar için -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-brand-dark text-gray-100 font-sans antialiased selection:bg-brand-primary selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-brand-dark/90 backdrop-blur border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2.5 text-2xl font-bold text-white">
+                <img src="../../assets/images/siriussyncAppIcon.png" alt="SiriusSync ITS" class="w-8 h-8 object-contain">
+                <div>SiriusSync <span class="text-brand-primary font-light">ITS</span></div>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-medium">
+                <a href="#ozellikler" class="hover:text-white transition">Özellikler</a>
+                <a href="#guvenlik" class="hover:text-white transition">Güvenlik</a>
+                <a href="#fiyatlandirma" class="hover:text-white transition">Fiyatlandırma</a>
+            </div>
+            <a href="#fiyatlandirma"
+                class="bg-brand-primary hover:bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-medium transition shadow-lg shadow-blue-500/30">Hemen
+                Başla</a>
+        </div>
+    </nav>
+
+    <!-- Hero Bölümü -->
+    <section class="relative pt-24 pb-32 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-brand-dark via-gray-900 to-blue-900/20 -z-10"></div>
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <div
+                    class="inline-block bg-blue-500/10 border border-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold tracking-wide mb-6">
+                    <span id="currentVersion">v1.5.4</span> YAYINDA
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+                    İşletmeniz İçin <br>
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent">Gerçek
+                        Zamanlı</span> ERP
+                </h1>
+                <p class="text-lg text-gray-400 mb-8 leading-relaxed">
+                    Küçük ve Orta Büyüklükteki İşletmeler için gerçek zamanlı bulut senkronizasyonu, birleşik
+                    müşteri/tedarikçi (CRM), uçtan uca sipariş döngüleri (SOM/POM) ve gelişmiş maliyet analizi sunan
+                    yeni nesil masaüstü çözümü.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#fiyatlandirma"
+                        class="bg-white text-brand-dark px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition">Paketleri
+                        İncele</a>
+                    <a href="#ozellikler"
+                        class="border border-gray-700 hover:border-gray-500 text-white px-8 py-3 rounded-lg font-medium transition">Daha
+                        Fazla Bilgi</a>
+                </div>
+            </div>
+            <div class="relative">
+                <div
+                    class="bg-brand-card border border-gray-700 shadow-2xl shadow-blue-900/20 rounded-xl overflow-hidden group">
+                    <img src="../../assets/images/siriussync.png" alt="SiriusSync ITS Arayüzü"
+                        class="w-full h-auto object-cover block">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Özellikler (Features) -->
+    <section id="ozellikler" class="py-24 bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">Her Şey Kontrolünüz Altında</h2>
+                <p class="text-gray-400">Karmaşık sistemleri unutun. Modüler yapımız sayesinde işletmeniz büyüdükçe
+                    yazılımınız da sizinle birlikte büyür.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Kutu 1 -->
+                <div
+                    class="bg-brand-card border border-gray-700 p-8 rounded-2xl hover:border-brand-primary/50 transition duration-300">
+                    <div
+                        class="w-12 h-12 bg-blue-500/10 text-brand-primary flex items-center justify-center rounded-xl text-xl mb-6">
+                        <i class="fa-solid fa-puzzle-piece"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Esnek & Modüler ERP</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Sadece ihtiyacınız olan özellikleri kullanın. İşiniz büyüdükçe Envanter, CRM, SOM, POM
+                        modüllerini kolayca devreye alın.
+                    </p>
+                </div>
+                <!-- Kutu 2 -->
+                <div
+                    class="bg-brand-card border border-gray-700 p-8 rounded-2xl hover:border-brand-primary/50 transition duration-300">
+                    <div
+                        class="w-12 h-12 bg-cyan-500/10 text-brand-accent flex items-center justify-center rounded-xl text-xl mb-6">
+                        <i class="fa-solid fa-cloud-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Bulut Senkronizasyonlu</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Masaüstünün yüksek performansını bulutun esnekliğiyle birleştirin. Ekibiniz tüm verilere her an,
+                        her yerden gerçek zamanlı erişsin.
+                    </p>
+                </div>
+                <!-- Kutu 3 -->
+                <div
+                    class="bg-brand-card border border-gray-700 p-8 rounded-2xl hover:border-brand-primary/50 transition duration-300">
+                    <div
+                        class="w-12 h-12 bg-purple-500/10 text-purple-400 flex items-center justify-center rounded-xl text-xl mb-6">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Modern & Kolay Kullanım</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Eğitim gerektirmeyen, göz yormayan modern arayüz (UI). Veri girişini hızlandıran kısa yollar ve
+                        akıllı formlarla zamandan tasarruf edin.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Güvenlik Bölümü -->
+    <section id="guvenlik" class="py-24 border-t border-b border-gray-800 bg-gray-800/50">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1 flex justify-center">
+                <i
+                    class="fa-solid fa-shield-halved text-[12rem] text-gray-200 drop-shadow-[0_0_30px_rgba(59,130,246,0.25)]"></i>
+            </div>
+            <div class="order-1 md:order-2">
+                <h2 class="text-3xl font-bold text-white mb-4">Verileriniz Tamamen <br>Sizin Kontrolünüzde</h2>
+                <p class="text-gray-400 mb-6 leading-relaxed">
+                    Tüm verileriniz, sizin adınıza özel olarak oluşturulan güvenilir bulut altyapılarında (Supabase,
+                    Firestore vb.) yüksek güvenlik standartlarıyla saklanır.
+                </p>
+                <p class="text-gray-400 mb-8 leading-relaxed">
+                    Kurulum tamamlandığı anda tüm hesap yetkileri size devredilir; böylece verilerinizin tek sahibi ve
+                    yöneticisi sadece siz olursunuz.
+                </p>
+                <a href="https://supabase.com/security" target="_blank" rel="noopener noreferrer"
+                    class="text-brand-accent font-medium hover:text-white inline-flex items-center gap-2 transition">
+                    Güvenlik Altyapısını İncele <i class="fa-solid fa-arrow-right text-sm"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fiyatlandırma -->
+    <section id="fiyatlandirma" class="py-24 bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-primary font-semibold tracking-wider text-sm">TEK SEFERLİK ÖDEME</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">Ömür Boyu Kullanım</h2>
+                <p class="text-gray-400">
+                    Aylık veya yıllık abonelik ücretleriyle yazılım kiralama devrine son. Hiçbir gizli ücret veya
+                    kısıtlama olmadan tüm kontrol ömür boyu sizde.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+
+                <!-- Standart Paket -->
+                <div class="bg-brand-card border border-gray-700 rounded-3xl p-8 flex flex-col">
+                    <h3 class="text-2xl font-bold text-white mb-2">Standard</h3>
+                    <p class="text-gray-400 text-sm mb-6 h-12">Temel envanter ve operasyon ihtiyaçlarınızı karşılayacak
+                        ideal ERP başlangıç paketi.</p>
+                    <div class="mb-8">
+                        <span class="text-4xl font-extrabold text-white">35.000₺</span>
+                    </div>
+
+                    <ul class="space-y-4 mb-8 flex-1 text-sm text-gray-300">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> Ürünler
+                        </li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> Müşteri &
+                            Tedarikçi (CRM)</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> Maliyet
+                            Fişi & Kategoriler</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> Canlı Döviz
+                            Kuru (TCMB)</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> Uygulama
+                            İçi Bildirim</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> PDF
+                            Raporlar (1 Adet)</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> Bulut
+                            Veritabanı & Canlı Senk.</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> Kurulum (1
+                            Cihaz)</li>
+                        <li class="flex items-center gap-3 text-white font-medium"><i
+                                class="fa-solid fa-headset text-brand-primary"></i> 15 Gün Ücretsiz Destek</li>
+                    </ul>
+                    <a href="https://bionluk.com/coderacjhp" target="_blank" rel="noopener noreferrer"
+                        class="block w-full py-3 px-4 bg-gray-700 hover:bg-gray-600 text-white text-center font-bold rounded-xl transition">Standart
+                        Satın Al</a>
+                </div>
+
+                <!-- Premium Paket -->
+                <div
+                    class="bg-brand-card border-2 border-brand-primary rounded-3xl p-8 flex flex-col relative transform md:-translate-y-4 shadow-2xl shadow-blue-900/40">
+                    <div
+                        class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-primary text-white text-xs font-bold px-3 py-1 rounded-full tracking-wide">
+                        EN ÇOK TERCİH EDİLEN
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Premium</h3>
+                    <p class="text-gray-400 text-sm mb-6 h-12">Uçtan uca operasyon ve tam kontrol isteyen işletmeler
+                        için eksiksiz ERP deneyimi.</p>
+                    <div class="mb-8">
+                        <span class="text-4xl font-extrabold text-white">70.000₺</span>
+                    </div>
+
+                    <ul class="space-y-4 mb-8 flex-1 text-sm text-gray-300">
+                        <li class="flex items-center gap-3 font-semibold text-white"><i
+                                class="fa-solid fa-layer-group text-brand-primary"></i> Standart Paketteki Tüm Modüller
+                        </li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> Satın Alma
+                            & Satış Döngüsü (POM/SOM)</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> İşlem
+                            Geçmişi (Hareketler) & Fişler</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i>
+                            Kullanıcılar ve Yetkilendirme</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> Barkod
+                            Yönetimi</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> Veri
+                            Aktarma (Excel)</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> Uygulama
+                            İçi + E-posta Bildirimi</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> PDF
+                            Raporlar (6 Adet)</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-500"></i> Kurulum (3
+                            Cihaz)</li>
+                        <li class="flex items-center gap-3 text-white font-medium"><i
+                                class="fa-solid fa-headset text-brand-primary"></i> 30 Gün Ücretsiz Destek</li>
+                    </ul>
+                    <a href="https://bionluk.com/coderacjhp" target="_blank" rel="noopener noreferrer"
+                        class="block w-full py-3 px-4 bg-brand-primary hover:bg-blue-600 text-white text-center font-bold rounded-xl transition shadow-lg shadow-blue-500/25">Premium
+                        Satın Al</a>
+                </div>
+
+            </div>
+
+            <!-- Dipnot -->
+            <div
+                class="max-w-5xl mx-auto mt-12 bg-gray-800/50 border border-gray-700 rounded-xl p-6 text-xs text-gray-400 leading-relaxed flex gap-4 items-start">
+                <i class="fa-solid fa-circle-info text-gray-400 mt-0.5 text-lg"></i>
+                <p>
+                    <strong class="text-gray-200">Bulut Altyapısı Hakkında:</strong> Biz yazılım için aylık ücret
+                    almıyoruz. Veritabanınız (Supabase/Firestore) doğrudan sizin adınıza açılıp kontrolünüzde olduğu
+                    için, bu platformların sunduğu ücretsiz kullanım limitleriyle genellikle uzun süre ek masrafsız
+                    ilerlersiniz. İlerleyen dönemde veri hacminizin çok büyümesi veya kotanızı aşmanız durumunda
+                    uygulanacak olası altyapı ücretleri, tamamen seçtiğiniz bulut servisinin kendi resmi paketlerine
+                    göre belirlenir ve aracı olmadan doğrudan o platforma ödenir.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2 text-xl font-bold text-white">
+                <img src="../../assets/images/siriussyncAppIcon.png" alt="SiriusSync ITS" class="w-7 h-7 object-contain">
+                <div>SiriusSync <span class="font-light text-gray-500">ITS</span></div>
+            </div>
+
+            <div class="flex gap-6 text-sm text-gray-400">
+                <a href="privacy-policy.html"
+                    class="hover:text-white transition">Privacy Policy</a>
+                <a href="terms-of-use.html"
+                    class="hover:text-white transition">Terms of Use</a>
+                <a href="support.html"
+                    class="hover:text-white transition">Support</a>
+            </div>
+
+            <div class="text-gray-500 text-sm">
+                &copy; 2026 Coder ACJHP. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        fetch('docs/version.json')
+            .then(r => r.ok ? r.json() : null)
+            .then(data => {
+                if (data && data.latest_version) {
+                    const v = data.latest_version.startsWith('v') ? data.latest_version : 'v' + data.latest_version;
+                    document.getElementById('currentVersion').textContent = v;
+                }
+            })
+            .catch(() => {});
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+---
+interface Props {
+  lang?: 'en' | 'tr';
+}
+
+const { lang = 'en' } = Astro.props;
+
+const t = {
+  en: {
+    sectionNum: '03 / TECHNICAL SPECIFICATIONS',
+    headline: 'Engineering matrix & core competencies.',
+    desc: 'Battle-tested across 8+ years of production software development, focusing on memory efficiency, deterministic concurrency, and rigorous security posture.',
+    pillars: [
+      {
+        category: 'NATIVE IOS ECOSYSTEM',
+        skills: ['Swift 5.9+', 'SwiftUI', 'UIKit / AutoLayout', 'Combine / Concurrency', 'StoreKit 2 / RevenueCat'],
+        badge: '8+ YRS',
+      },
+      {
+        category: 'ENTERPRISE DESKTOP & JAVA',
+        skills: ['Java 17/21 LTS', 'JavaFX Modern GUI', 'Maven Lifecycle', 'Bcrypt Security', 'JPackage Distribution'],
+        badge: 'PRODUCTION',
+      },
+      {
+        category: 'CLOUD & PERSISTENCE',
+        skills: ['Supabase Cloud', 'PostgreSQL RLS Policies', 'Realtime WebSockets', 'Database Architecture', 'Firebase'],
+        badge: 'REALTIME',
+      },
+      {
+        category: 'APPLIED AI & COMPUTER VISION',
+        skills: ['Apple CoreML', 'Vision Framework', 'pHash Algorithm', 'OpenCV Shaders', 'CoreImage Pipelines'],
+        badge: 'INTELLIGENT',
+      },
+    ],
+  },
+  tr: {
+    sectionNum: '03 / TEKNİK YETKİNLİKLER',
+    headline: 'Mühendislik matrisi ve uzmanlık alanları.',
+    desc: '8 yılı aşkın profesyonel üretim tecrübesiyle pekiştirilmiş; bellek verimliliği, eşzamanlı mimariler ve kurumsal güvenlik standartlarına dayalı altyapı.',
+    pillars: [
+      {
+        category: 'NATIVE IOS EKOSİSTEMİ',
+        skills: ['Swift 5.9+', 'SwiftUI', 'UIKit / AutoLayout', 'Combine / Concurrency', 'StoreKit 2 / RevenueCat'],
+        badge: '8+ YIL',
+      },
+      {
+        category: 'KURUMSAL MASAÜSTÜ & JAVA',
+        skills: ['Java 17/21 LTS', 'JavaFX Modern Arayüz', 'Maven Mimarisi', 'Bcrypt Şifreleme', 'JPackage Dağıtımı'],
+        badge: 'CANLI ORTAM',
+      },
+      {
+        category: 'BULUT & VERİTABANI MİMARİSİ',
+        skills: ['Supabase Cloud', 'PostgreSQL RLS Politikaları', 'Gerçek Zamanlı WebSockets', 'Veri Modelleme', 'Firebase'],
+        badge: 'REALTIME',
+      },
+      {
+        category: 'YAPAY ZEKA & BİLGİSAYARLI GÖRÜ',
+        skills: ['Apple CoreML', 'Vision Framework', 'pHash Algoritması', 'OpenCV Filtreleri', 'CoreImage İşleme'],
+        badge: 'AKILLI SİSTEMLER',
+      },
+    ],
+  },
+}[lang];
+---
+
+<section id="expertise" class="py-24 px-6 md:px-12 hairline-b bg-[#070709]">
+  <div class="max-w-6xl mx-auto">
+    <!-- Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+      <div>
+        <span class="text-xs font-mono tracking-widest text-zinc-500 uppercase block mb-3">
+          {t.sectionNum}
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-editorial tracking-tight text-white max-w-xl leading-none">
+          {t.headline}
+        </h2>
+      </div>
+      <p class="text-sm text-zinc-400 max-w-md font-light leading-relaxed">
+        {t.desc}
+      </p>
+    </div>
+
+    <!-- Pillars Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {
+        t.pillars.map((pillar) => (
+          <div class="p-6 sm:p-8 rounded-3xl hairline bg-[#08080a] flex flex-col justify-between h-full">
+            <div>
+              <div class="flex justify-between items-center mb-6">
+                <span class="text-[10px] font-mono tracking-widest text-zinc-500 uppercase">
+                  {pillar.badge}
+                </span>
+                <span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>
+              </div>
+              <h3 class="text-sm font-mono font-bold text-white uppercase tracking-wider mb-6">
+                {pillar.category}
+              </h3>
+            </div>
+
+            <ul class="space-y-3 pt-4 border-t border-white/5">
+              {pillar.skills.map((skill) => (
+                <li class="text-xs font-mono text-zinc-400 flex items-center gap-2">
+                  <span class="text-zinc-600">›</span>
+                  <span>{skill}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+

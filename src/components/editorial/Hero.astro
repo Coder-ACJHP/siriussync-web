@@ -1,0 +1,92 @@
+---
+import FluidCanvas from '../canvas/FluidCanvas';
+
+interface Props {
+  lang?: 'en' | 'tr';
+}
+
+const { lang = 'en' } = Astro.props;
+
+const content = {
+  en: {
+    statusBadge: 'SOFTWARE STUDIO & SENIOR ENGINEERING',
+    headlineMain: 'Crafting resilient architecture with intent, precision, &',
+    headlineItalic: 'monumental depth.',
+    description:
+      'Senior Software Engineer with 8+ years dedicated to Native iOS (Swift, SwiftUI, UIKit, CoreML) and Enterprise Desktop ERP architectures (JavaFX, Supabase, Bcrypt, Postgres). Founder of SiriusSync ITS and creator of autonomous mobile utilities.',
+    exploreBtn: 'Explore Flagships',
+    contactBtn: 'Direct Inquiries',
+    metaLocation: 'ISTANBUL, TR',
+    metaExp: '8+ YRS EXP',
+    metaStack: 'SWIFT • JAVAFX • POSTGRES',
+  },
+  tr: {
+    statusBadge: 'YAZILIM STÜDYOSU & KIDEMLİ MÜHENDİSLİK',
+    headlineMain: 'Yazılım mimarilerini niyet, hassasiyet ve',
+    headlineItalic: 'derin bir işçilikle inşa ediyorum.',
+    description:
+      '8 yılı aşkın profesyonel deneyimle Native iOS (Swift, SwiftUI, UIKit, CoreML) ve Kurumsal Masaüstü ERP mimarileri (JavaFX, Supabase, Bcrypt, Postgres) geliştiren kıdemli yazılım mühendisi. SiriusSync ITS kurucusu ve bağımsız ürün yaratıcısı.',
+    exploreBtn: 'Amiral Gemilerini İncele',
+    contactBtn: 'Doğrudan İletişim',
+    metaLocation: 'İSTANBUL, TR',
+    metaExp: '8+ YIL DENEYİM',
+    metaStack: 'SWIFT • JAVAFX • POSTGRES',
+  },
+}[lang];
+---
+
+<section class="relative pt-24 pb-20 md:pt-36 md:pb-32 px-6 md:px-12 overflow-hidden hairline-b">
+  <!-- Interactive WebGL Canvas -->
+  <FluidCanvas client:load />
+
+  <div class="relative z-10 max-w-6xl mx-auto">
+    <!-- Meta details bar -->
+    <div class="flex flex-wrap items-center justify-between gap-4 pb-8 mb-8 hairline-b text-xs font-mono text-zinc-500 uppercase tracking-widest">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+        <span>{content.statusBadge}</span>
+      </div>
+      <div class="flex items-center gap-6">
+        <span>{content.metaLocation}</span>
+        <span>•</span>
+        <span>{content.metaExp}</span>
+        <span>•</span>
+        <span>{content.metaStack}</span>
+      </div>
+    </div>
+
+    <!-- Editorial Manifesto Headline -->
+    <div class="max-w-5xl mb-10">
+      <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal tracking-tight text-white leading-[1.05]">
+        {content.headlineMain}{' '}
+        <span class="font-editorial italic text-zinc-300 underline decoration-white/20 underline-offset-8">
+          {content.headlineItalic}
+        </span>
+      </h1>
+    </div>
+
+    <!-- Subtitle and Actions -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end pt-4">
+      <div class="md:col-span-8">
+        <p class="text-base sm:text-lg md:text-xl text-zinc-400 font-light leading-relaxed max-w-3xl">
+          {content.description}
+        </p>
+      </div>
+      <div class="md:col-span-4 flex flex-col sm:flex-row md:flex-col gap-3 justify-end">
+        <a
+          href="#siriussync"
+          class="inline-flex items-center justify-center px-7 py-3.5 rounded-full text-xs font-mono uppercase tracking-wider bg-white text-black hover:bg-zinc-200 transition-all font-semibold"
+        >
+          {content.exploreBtn}
+        </a>
+        <a
+          href="#contact"
+          class="inline-flex items-center justify-center px-7 py-3.5 rounded-full text-xs font-mono uppercase tracking-wider hairline text-zinc-300 hover:text-white hover:border-white/40 transition-all font-medium"
+        >
+          {content.contactBtn}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+

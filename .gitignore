@@ -1,2 +1,13 @@
+# Dependencies
+node_modules/
+
+# Production build output & cache
+dist/
+.astro/
+
+# System and logs
 .DS_Store
+.env*
+npm-debug.log*
+
 docs/.agents/teamwork/ORIGINAL_REQUEST.md

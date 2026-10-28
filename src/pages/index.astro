@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/editorial/Header.astro';
+import Hero from '../components/editorial/Hero.astro';
+import MetricsStrip from '../components/editorial/MetricsStrip.astro';
+import FlagshipShowcase from '../components/editorial/FlagshipShowcase.astro';
+import MobileEcosystem from '../components/editorial/MobileEcosystem.astro';
+import TechMatrix from '../components/editorial/TechMatrix.astro';
+import ContactBar from '../components/editorial/ContactBar';
+import Footer from '../components/editorial/Footer.astro';
+---
+
+<BaseLayout
+  lang="en"
+  title="Onur Işık (Coder ACJHP) — Software Studio & Founder Hub"
+  description="Senior Software Engineer with 8+ years crafting Native iOS apps and Enterprise Desktop ERP systems. Founder of SiriusSync ITS."
+>
+  <Header lang="en" />
+  <main>
+    <Hero lang="en" />
+    <MetricsStrip lang="en" />
+    <FlagshipShowcase lang="en" />
+    <MobileEcosystem lang="en" />
+    <TechMatrix lang="en" />
+    <ContactBar client:visible lang="en" />
+  </main>
+  <Footer lang="en" />
+</BaseLayout>
+

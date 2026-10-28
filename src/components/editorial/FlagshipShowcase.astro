@@ -1,0 +1,170 @@
+---
+interface Props {
+  lang?: 'en' | 'tr';
+}
+
+const { lang = 'en' } = Astro.props;
+
+const t = {
+  en: {
+    sectionNum: '01 / FLAGSHIP ARCHITECTURES',
+    headline: 'Enterprise systems & flagship software.',
+    desc: 'Deep-dive explorations into bespoke desktop enterprise platforms and native Apple utilities built with zero compromise.',
+    caseStudyBtn: 'Read Deep Case Study →',
+    siriusSyncTitle: 'SiriusSync ITS — Next-Gen Enterprise Desktop ERP',
+    siriusSyncTag: 'FLAGSHIP • v1.5.5 PRODUCTION',
+    siriusSyncDesc:
+      'Engineered with JavaFX, modern reactive pipelines, Bcrypt encryption, and Supabase PostgreSQL with strict Row Level Security (RLS). Delivers real-time multi-terminal inventory synchronization, automated purchase and sales order lifecycles (POM/SOM), integrated CRM, and hardware-bound license verification.',
+    standbyTitle: 'StandBy Clock — Minimalist Nightstand Experience',
+    standbyTag: 'NATIVE IOS & SWIFTUI',
+    standbyDesc:
+      'Curated bedside utility featuring 14+ bespoke clock faces, fluid gesture-driven navigation, localized weather data, and low-latency rendering tailored for OLED nightstand ergonomics.',
+  },
+  tr: {
+    sectionNum: '01 / AMİRAL GEMİSİ MİMARİLER',
+    headline: 'Kurumsal sistemler ve amiral gemisi yazılımlar.',
+    desc: 'Tavizsiz bir mühendislik anlayışıyla geliştirilmiş masaüstü kurumsal sistemlerin ve native Apple çözümlerinin derinlemesine incelemesi.',
+    caseStudyBtn: 'Kapsamlı Case Study’yi Oku →',
+    siriusSyncTitle: 'SiriusSync ITS — Yeni Nesil Masaüstü Kurumsal ERP',
+    siriusSyncTag: 'AMİRAL GEMİSİ • v1.5.5 CANLI SÜRÜM',
+    siriusSyncDesc:
+      'JavaFX, reaktif veri akışları, Bcrypt şifreleme ve Supabase PostgreSQL (RLS politikaları) ile sıfırdan geliştirildi. Çok terminalli gerçek zamanlı envanter senkronizasyonu, POM/SOM sipariş döngüleri, entegre CRM ve donanım kimlikli (HWID) kurumsal lisans yönetimi sunar.',
+    standbyTitle: 'StandBy Clock — Minimalist Masaüstü Gece Saati',
+    standbyTag: 'NATIVE IOS & SWIFTUI',
+    standbyDesc:
+      'OLED ekran ergonomisi için optimize edilmiş 14’ten fazla özel saat teması, akıcı jest kontrolleri, yerel hava durumu entegrasyonu ve sıfır gecikmeli arayüz deneyimi.',
+  },
+}[lang];
+
+const siriusSyncLink = lang === 'en' ? '/works/siriussync' : '/tr/works/siriussync';
+const standbyLink = lang === 'en' ? '/works/standby' : '/tr/works/standby';
+---
+
+<section id="siriussync" class="py-24 px-6 md:px-12 hairline-b">
+  <div class="max-w-6xl mx-auto">
+    <!-- Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+      <div>
+        <span class="text-xs font-mono tracking-widest text-zinc-500 uppercase block mb-3">
+          {t.sectionNum}
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-editorial tracking-tight text-white max-w-xl leading-none">
+          {t.headline}
+        </h2>
+      </div>
+      <p class="text-sm text-zinc-400 max-w-md font-light leading-relaxed">
+        {t.desc}
+      </p>
+    </div>
+
+    <!-- Flagship 1: SiriusSync ITS -->
+    <div class="mb-16 rounded-3xl hairline bg-[#08080a] p-6 md:p-10 relative overflow-hidden group">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 space-y-6">
+          <div class="flex flex-wrap items-center gap-3">
+            <span class="px-3 py-1 rounded-full text-[11px] font-mono tracking-wider bg-white text-black font-semibold">
+              {t.siriusSyncTag}
+            </span>
+            <span class="text-xs font-mono text-zinc-500">
+              macOS & Windows Cross-Platform
+            </span>
+          </div>
+
+          <h3 class="text-2xl sm:text-4xl font-editorial tracking-tight text-white leading-tight">
+            {t.siriusSyncTitle}
+          </h3>
+
+          <p class="text-sm sm:text-base text-zinc-400 font-light leading-relaxed">
+            {t.siriusSyncDesc}
+          </p>
+
+          <div class="flex flex-wrap gap-2 text-xs font-mono text-zinc-400 pt-2">
+            <span class="px-3 py-1.5 rounded-lg hairline bg-zinc-950">Java 21 / JavaFX</span>
+            <span class="px-3 py-1.5 rounded-lg hairline bg-zinc-950">Supabase Realtime</span>
+            <span class="px-3 py-1.5 rounded-lg hairline bg-zinc-950">PostgreSQL + RLS</span>
+            <span class="px-3 py-1.5 rounded-lg hairline bg-zinc-950">Bcrypt Security</span>
+            <span class="px-3 py-1.5 rounded-lg hairline bg-zinc-950">Maven Modular</span>
+          </div>
+
+          <div class="pt-4 flex flex-wrap items-center gap-4">
+            <a
+              href={siriusSyncLink}
+              class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-mono uppercase tracking-wider bg-white text-black hover:bg-zinc-200 transition-all font-semibold"
+            >
+              <span>{t.caseStudyBtn}</span>
+            </a>
+            <a
+              href="/projects/siriussync/docs/change-log.html"
+              target="_blank"
+              class="inline-flex items-center gap-2 px-5 py-3 rounded-full text-xs font-mono uppercase tracking-wider hairline text-zinc-400 hover:text-white transition-colors"
+            >
+              <span>Changelog v1.5.5</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <a href={siriusSyncLink} class="block editorial-img-container rounded-2xl hairline bg-zinc-950 p-2 shadow-2xl">
+            <img
+              src="/assets/images/siriussync.png"
+              alt="SiriusSync ITS Architecture"
+              class="w-full h-auto rounded-xl object-cover object-top"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flagship 2: StandBy Clock -->
+    <div class="rounded-3xl hairline bg-[#08080a] p-6 md:p-10 relative overflow-hidden group">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-5 order-2 lg:order-1">
+          <a href={standbyLink} class="block editorial-img-container rounded-2xl hairline bg-zinc-950 p-2 shadow-2xl">
+            <img
+              src="/assets/images/standby.jpg"
+              alt="StandBy Clock"
+              class="w-full h-auto rounded-xl object-cover object-center"
+            />
+          </a>
+        </div>
+
+        <div class="lg:col-span-7 space-y-6 order-1 lg:order-2">
+          <div class="flex flex-wrap items-center gap-3">
+            <span class="px-3 py-1 rounded-full text-[11px] font-mono tracking-wider bg-zinc-800 text-zinc-200 font-semibold hairline">
+              {t.standbyTag}
+            </span>
+            <span class="text-xs font-mono text-zinc-500">
+              +14 Bespoke Display Interfaces
+            </span>
+          </div>
+
+          <h3 class="text-2xl sm:text-4xl font-editorial tracking-tight text-white leading-tight">
+            {t.standbyTitle}
+          </h3>
+
+          <p class="text-sm sm:text-base text-zinc-400 font-light leading-relaxed">
+            {t.standbyDesc}
+          </p>
+
+          <div class="flex flex-wrap gap-2 text-xs font-mono text-zinc-400 pt-2">
+            <span class="px-3 py-1.5 rounded-lg hairline bg-zinc-950">Swift 5.9</span>
+            <span class="px-3 py-1.5 rounded-lg hairline bg-zinc-950">SwiftUI</span>
+            <span class="px-3 py-1.5 rounded-lg hairline bg-zinc-950">UIKit Animation</span>
+            <span class="px-3 py-1.5 rounded-lg hairline bg-zinc-950">CoreLocation</span>
+            <span class="px-3 py-1.5 rounded-lg hairline bg-zinc-950">OLED Dark Optimization</span>
+          </div>
+
+          <div class="pt-4">
+            <a
+              href={standbyLink}
+              class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-mono uppercase tracking-wider bg-white text-black hover:bg-zinc-200 transition-all font-semibold"
+            >
+              <span>{t.caseStudyBtn}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

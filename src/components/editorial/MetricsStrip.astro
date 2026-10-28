@@ -1,0 +1,45 @@
+---
+interface Props {
+  lang?: 'en' | 'tr';
+}
+
+const { lang = 'en' } = Astro.props;
+
+const metrics = {
+  en: [
+    { label: 'ENGINEERING PRACTICE', value: '8+ Yrs', desc: 'Enterprise Desktop & Native iOS' },
+    { label: 'STACK OVERFLOW SCORE', value: '~2,254', desc: '1 Gold • 24 Silver • 38 Bronze' },
+    { label: 'SHIPPED ECOSYSTEM', value: '5+ Apps', desc: 'macOS, Windows, iOS & WatchOS' },
+    { label: 'DATA PERSISTENCE', value: 'Realtime', desc: 'Supabase RLS & Cloud Infrastructure' },
+  ],
+  tr: [
+    { label: 'MÜHENDİSLİK PRATİĞİ', value: '8+ Yıl', desc: 'Kurumsal Masaüstü & Native iOS' },
+    { label: 'STACK OVERFLOW SKORU', value: '~2.254', desc: '1 Altın • 24 Gümüş • 38 Bronz' },
+    { label: 'CANLI ÜRÜN EKOSİSTEMİ', value: '5+ Ürün', desc: 'macOS, Windows, iOS & WatchOS' },
+    { label: 'VERİ GÜVENLİĞİ', value: 'Gerçek Zamanlı', desc: 'Supabase RLS & Bulut Altyapısı' },
+  ],
+}[lang];
+---
+
+<section class="hairline-b bg-[#070709]">
+  <div class="max-w-6xl mx-auto px-6 md:px-12 py-12">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+      {
+        metrics.map((m) => (
+          <div class="flex flex-col justify-between">
+            <span class="text-[11px] font-mono tracking-widest text-zinc-500 uppercase mb-2">
+              {m.label}
+            </span>
+            <div class="text-3xl sm:text-4xl font-mono font-medium text-white tracking-tight my-1">
+              {m.value}
+            </div>
+            <span class="text-xs text-zinc-400 font-light">
+              {m.desc}
+            </span>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+

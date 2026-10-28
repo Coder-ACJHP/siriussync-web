@@ -1,0 +1,139 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/editorial/Header.astro';
+import Footer from '../../../components/editorial/Footer.astro';
+import { ArrowLeft, Clock, Moon, ArrowUpRight } from 'lucide-react';
+---
+
+<BaseLayout
+  lang="tr"
+  title="StandBy Clock — Native iOS Vitrin | Onur Işık"
+  description="StandBy Clock: SwiftUI ve UIKit ile geliştirilmiş, 14+ özel arayüze sahip minimalist masaüstü gece saati."
+>
+  <Header lang="tr" currentSlug="standby" />
+
+  <main class="py-16 md:py-24 px-6 md:px-12">
+    <div class="max-w-5xl mx-auto">
+      <!-- Breadcrumb / Back Link -->
+      <a href="/tr/#works" class="inline-flex items-center gap-2 text-xs font-mono tracking-widest text-zinc-500 hover:text-white uppercase mb-8 transition-colors">
+        <ArrowLeft className="w-3.5 h-3.5" />
+        <span>Stüdyo Özetine Dön</span>
+      </a>
+
+      <!-- Case Study Hero -->
+      <div class="mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-white text-black font-semibold uppercase tracking-wider mb-6">
+          <span>NATIVE IOS UYGULAMASI • 14+ TEMA</span>
+        </div>
+        <h1 class="text-4xl sm:text-6xl md:text-7xl font-editorial tracking-tight text-white leading-tight mb-6">
+          StandBy Clock: Komodin İçin Minimalist Ergonomi
+        </h1>
+        <p class="text-lg md:text-xl text-zinc-400 font-light max-w-3xl leading-relaxed">
+          Cihazınızı dikkat dağıtmayan, şık bir masaüstü ve gece saatine dönüştürmek için tasarlandı. Native SwiftUI ve düşük güç tüketimli render algoritmaları üzerine kurulu.
+        </p>
+      </div>
+
+      <!-- Quick Metrics Strip -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-6 rounded-2xl hairline bg-[#08080a] mb-12 text-xs font-mono">
+        <div>
+          <span class="text-zinc-500 uppercase block mb-1">ARAYÜZLER</span>
+          <span class="text-white font-bold">14+ Özel Saat Teması</span>
+        </div>
+        <div>
+          <span class="text-zinc-500 uppercase block mb-1">TEKNOLOJİ</span>
+          <span class="text-white font-bold">SwiftUI & UIKit</span>
+        </div>
+        <div>
+          <span class="text-zinc-500 uppercase block mb-1">OPTİMİZASYON</span>
+          <span class="text-white font-bold">OLED Düşük Güç Gece Modu</span>
+        </div>
+        <div>
+          <span class="text-zinc-500 uppercase block mb-1">OTOMASYON</span>
+          <span class="text-white font-bold">Fastlane CI/CD</span>
+        </div>
+      </div>
+
+      <!-- Hero Image -->
+      <div class="rounded-3xl hairline overflow-hidden bg-zinc-950 p-3 mb-16 shadow-2xl">
+        <img
+          src="/assets/images/standby.jpg"
+          alt="StandBy Clock Görünümü"
+          class="w-full h-auto rounded-2xl object-cover"
+        />
+      </div>
+
+      <!-- Details -->
+      <div class="space-y-16">
+        <section class="hairline-t pt-12">
+          <span class="text-xs font-mono uppercase tracking-widest text-zinc-500 block mb-3">01 / TASARIM FELSEFESİ</span>
+          <h2 class="text-2xl sm:text-3xl font-editorial text-white mb-4">
+            Sıfır Parlama, Saf İşlevsellik
+          </h2>
+          <p class="text-sm sm:text-base text-zinc-400 font-light leading-relaxed mb-6">
+            StandBy Clock, gereksiz bildirim kirliliğini ortadan kaldırarak ekranı en saf haline getirir. Gözü yormayan ultra-kırmızı gece modu sayesinde karanlıkta uykuyu bölmeden saati ve ortam verilerini kontrol etme imkanı tanır.
+          </p>
+        </section>
+
+        <!-- Features Grid -->
+        <section class="hairline-t pt-12">
+          <span class="text-xs font-mono uppercase tracking-widest text-zinc-500 block mb-3">02 / ÇEKİRDEK MİMARİ</span>
+          <h2 class="text-2xl sm:text-3xl font-editorial text-white mb-8">
+            Hassas Mühendislik
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="p-6 rounded-2xl hairline bg-[#08080a] space-y-3">
+              <div class="w-10 h-10 rounded-xl hairline flex items-center justify-center bg-zinc-900 text-white">
+                <Clock className="w-5 h-5 text-zinc-200" />
+              </div>
+              <h3 class="text-lg font-mono font-bold text-white">14+ Tipografik Düzen</h3>
+              <p class="text-xs text-zinc-400 font-light leading-relaxed">
+                Retro mekanik kapaklı saatlerden modern mimari rakamlara kadar her arayüz ekran boyutuna milimetrik olarak uyum sağlar.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-2xl hairline bg-[#08080a] space-y-3">
+              <div class="w-10 h-10 rounded-xl hairline flex items-center justify-center bg-zinc-900 text-white">
+                <Moon className="w-5 h-5 text-indigo-400" />
+              </div>
+              <h3 class="text-lg font-mono font-bold text-white">OLED Yanma Koruması</h3>
+              <p class="text-xs text-zinc-400 font-light leading-relaxed">
+                Gözle fark edilmeyen mikro piksel kaydırmaları, telefon tüm gece standda kaldığında ekran panelinin ömrünü korur.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="hairline-t pt-12 pb-8">
+          <div class="p-8 md:p-12 rounded-3xl hairline bg-[#08080a] flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+            <div class="space-y-3">
+              <span class="text-xs font-mono uppercase tracking-widest text-zinc-500 block">
+                APP STORE YAYINI
+              </span>
+              <h3 class="text-2xl sm:text-3xl font-editorial text-white">
+                StandBy Clock'u iOS'ta Deneyimleyin
+              </h3>
+              <p class="text-xs sm:text-sm text-zinc-400 font-light max-w-xl">
+                iOS 16 ve üzeri destekleyen iPhone modelleriyle tam uyumlu. Otomatik yatay konum algılama desteği mevcuttur.
+              </p>
+            </div>
+
+            <a
+              href="https://apps.apple.com/developer/onur-isik"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-xs font-mono uppercase tracking-wider bg-white text-black hover:bg-zinc-200 transition-all font-semibold shrink-0"
+            >
+              <span>App Store'da İncele</span>
+              <ArrowUpRight className="w-4 h-4" />
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <Footer lang="tr" />
+</BaseLayout>
+
