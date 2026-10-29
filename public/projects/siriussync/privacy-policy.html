@@ -11,189 +11,291 @@
 <body class="doc-page">
 
   <h1>Privacy Policy</h1>
-  <p class="muted"><strong>SiriusSync ITS</strong> (the &ldquo;Application&rdquo;)</p>
+  <p class="muted"><strong>SiriusSync ITS</strong> &mdash; Enterprise ERP &amp; Inventory Management System</p>
   <p class="muted">Effective date: <strong>October 12, 2026</strong></p>
-  <p class="muted">Last updated: <strong>October 12, 2026</strong></p>
+  <p class="muted">Last updated: <strong>October 29, 2026</strong></p>
 
   <p>
-    This Privacy Policy describes how data is processed when you deploy, license, or use <strong>SiriusSync
-      ITS</strong>.
-    SiriusSync ITS is an enterprise desktop ERP and inventory management system developed by
-    <strong>Onur Işık (Coder ACJHP)</strong> (&ldquo;Software Provider,&rdquo;
-    &ldquo;developer,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;),
-    officially hosted at <a href="https://coderacjhp.pages.dev/projects/siriussync/" target="_blank"
+    This Privacy Policy explains how data is processed when your enterprise deploys, licenses, or operates
+    <strong>SiriusSync ITS</strong>. SiriusSync ITS is an enterprise desktop ERP, inventory management, and commercial
+    tracking software system engineered by <strong>Onur Işık (Coder ACJHP)</strong> (&ldquo;Software Provider,&rdquo;
+    &ldquo;Developer,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;), officially hosted at
+    <a href="https://coderacjhp.pages.dev/projects/siriussync/" target="_blank"
       rel="noopener noreferrer">https://coderacjhp.pages.dev/projects/siriussync/</a>.
   </p>
-
   <p>
-    If you have questions regarding this Privacy Policy or enterprise data protection practices, please contact us at
-    <a href="mailto:hexa.octabin@outlook.com">hexa.octabin@outlook.com</a>.
+    If you have questions regarding this Privacy Policy, enterprise data protection compliance, or technical security
+    controls, please contact us at <a href="mailto:hexa.octabin@outlook.com">hexa.octabin@outlook.com</a>.
   </p>
 
   <p>
-    <strong>Summary.</strong> SiriusSync ITS is engineered with strict privacy-by-design and data segregation
-    principles.
-    The Application guarantees zero telemetry, incorporates no third-party tracking or advertising SDKs, communicates
-    exclusively via encrypted HTTPS/WSS protocols, and preserves all operational commercial records under your
-    enterprise&rsquo;s direct control.
+    <strong>Executive Summary:</strong> SiriusSync ITS is designed and built from the ground up on strict
+    privacy-by-design and data sovereignty principles. The Application guarantees zero background telemetry, includes
+    no third-party tracking or advertising SDKs, communicates exclusively over encrypted HTTPS/TLS 1.3 and secure
+    WebSocket (WSS) protocols, hashes passwords using client-side BCrypt before transmission, and preserves all
+    operational commercial records under your enterprise&rsquo;s direct administrative control.
   </p>
 
   <hr />
 
-  <h2>1. Data Protection Roles: Data Controller vs. Software Provider (KVKK &amp; GDPR)</h2>
+  <h2>1. Data Protection Roles: Data Controller vs. Software Provider (GDPR &amp; KVKK)</h2>
   <p>
-    In compliance with the Turkish Law on the Protection of Personal Data (KVKK Law No. 6698) and the
-    European Union General Data Protection Regulation (GDPR Regulation (EU) 2016/679), responsibilities are clearly
-    demarcated:
+    Under the Turkish Law on the Protection of Personal Data (KVKK Law No. 6698) and the European Union General Data
+    Protection Regulation (GDPR Regulation (EU) 2016/679), legal roles and responsibilities are explicitly delineated:
   </p>
   <ul>
     <li>
       <strong>Data Controller (Customer Enterprise):</strong> The commercial enterprise or business entity licensing and
-      deploying
-      SiriusSync ITS acts as the Data Controller. The customer enterprise determines the business purposes, data
-      collection scope,
-      authorized personnel roles, and lawful retention periods for all commercial and personal data stored within its
-      deployment.
+      deploying SiriusSync ITS acts as the Data Controller. The customer enterprise defines the business purposes, scope
+      of data collection, operator role authorizations, data retention schedules, and lawful grounds for all commercial
+      records and personal data managed within its deployment.
     </li>
     <li>
-      <strong>Software Provider (Developer):</strong> Onur Işık (Coder ACJHP) serves exclusively as
-      the Software Provider
-      furnishing the desktop application software. The developer does not access customer databases in normal
-      operations, maintains no
-      centralized surveillance infrastructure, and does not act as a Data Controller for enterprise business records.
+      <strong>Software Provider (Developer):</strong> Onur Işık (Coder ACJHP) acts solely as the Software Provider
+      furnishing the desktop application software. In standard commercial operations, the Developer maintains no access
+      to customer databases, operates no centralized surveillance or telemetric logging infrastructure, and does not act
+      as a Data Controller for enterprise business records.
     </li>
   </ul>
 
-  <h2>2. Categories of Processed Data</h2>
+  <h2>2. Categories of Personal &amp; Operational Data Processed</h2>
   <p>SiriusSync ITS processes the following categories of operational and commercial data:</p>
   <ul>
     <li>
-      <strong>User Accounts &amp; Authentication:</strong> Enterprise user profiles, administrative accounts, role
-      assignments,
-      and passwords. Passwords are never stored in plain text; they are secured using one-way salted BCrypt hashing with
-      a work factor of 12
-      (12 rounds) on the client side before verification against backend records.
+      <strong>User Accounts &amp; Authentication Credentials:</strong> Enterprise operator profiles, administrative
+      accounts, role assignments, usernames, and passwords. Passwords are never stored or transmitted in plain text; they
+      are secured using one-way salted BCrypt hashing with a work factor of 12 (12 rounds) on the client workstation
+      prior to verification against backend records.
     </li>
     <li>
-      <strong>Commercial ERP Records:</strong> Operational business records including stock inventory levels, product
-      catalogs
-      (SKUs, barcodes, dimensions, weights, unit costs), Customer Relationship Management (CRM) contacts (customers,
-      suppliers,
-      credit limits, outstanding balances, interaction history), Sales Order Management (SOM) quotations, orders, and
-      delivery notes,
-      Purchase Order Management (POM) procurement orders, goods receipt notes (GRN), multi-item financial receipts, and
-      detailed cost sheets.
+      <strong>Commercial ERP &amp; Transactional Records:</strong> Core operational records including stock inventory
+      levels, product catalogs (SKUs, barcodes, dimensions, weights, unit costs, pricing), Customer Relationship
+      Management (CRM) contacts (client and supplier names, corporate titles, credit limits, outstanding balances,
+      interaction history), Sales Order Management (SOM) quotations, orders, and delivery notes, Purchase Order
+      Management (POM) procurement workflows, goods receipt notes (GRN), multi-item financial receipts, and cost sheets.
     </li>
     <li>
-      <strong>Hardware Fingerprinting (HWID Licensing):</strong> To enforce the commercial workstation device
-      license allocation (up to three (3) devices depending on the licensed package) per enterprise deployment, the Application generates a cryptographic Hardware Identifier (HWID) using
-      the open-source
-      OSHI (Operating System and Hardware Information) library. The HWID is an irreversible hash derived from system
-      hardware components
-      (motherboard and processor serials) and collects no personal or behavioral data.
+      <strong>Cryptographic Hardware Fingerprinting (HWID Licensing):</strong> To enforce workstation device seat
+      limits (e.g., up to three (3) workstation seats depending on your licensed tier), the Application generates a
+      cryptographic Hardware Identifier (HWID) using the open-source OSHI (Operating System and Hardware Information)
+      library. The HWID is an irreversible mathematical hash derived from physical hardware components (motherboard and
+      processor serials) and collects no personal, behavioral, or browsing data.
     </li>
     <li>
-      <strong>Media Uploads &amp; Cloud Storage:</strong> Product images, document scans, and receipt attachments
-      uploaded by
-      authorized operators are stored in dedicated cloud object storage buckets (Supabase Storage) linked to the
-      enterprise deployment.
+      <strong>Media Uploads &amp; Document Attachments:</strong> Product imagery, scanned supplier invoices, and receipt
+      attachments uploaded by authorized operators are stored in dedicated cloud object storage buckets (Supabase Storage)
+      linked directly to the customer&rsquo;s cloud project.
+    </li>
+    <li>
+      <strong>Voluntary Communications &amp; Support Data:</strong> Information you voluntarily provide when contacting
+      the Developer for technical support, licensing inquiries, or bug reports (such as your corporate email address,
+      communication history, and voluntary diagnostic error snippets).
+    </li>
+    <li>
+      <strong>Strict Zero-Telemetry Guarantee:</strong> The desktop software contains NO behavioral tracking scripts,
+      NO analytics libraries, NO third-party advertising SDKs, and places NO tracking cookies on client machines.
     </li>
   </ul>
 
-  <h2>3. Technical Security, Network Architecture &amp; Telemetry Guarantee</h2>
+  <h2>3. Lawful Bases for Processing (GDPR Article 6 &amp; KVKK Article 5)</h2>
   <p>
-    SiriusSync ITS enforces comprehensive security controls to protect enterprise data confidentiality and integrity:
+    Where the Software Provider processes personal data (such as licensing verification and technical support
+    communications), processing is strictly justified under the following lawful bases:
   </p>
   <ul>
     <li>
-      <strong>Zero Telemetry &amp; No Analytics:</strong> The Application contains absolutely zero telemetry, no
-      background
-      phone-home mechanisms, no behavioral analytics libraries, and no advertising SDKs.
+      <strong>Performance of a Contract (GDPR Art. 6(1)(b) / KVKK Art. 5(2)(c)):</strong> Processing is necessary to
+      deliver, license, authenticate, and validate workstation seats for SiriusSync ITS pursuant to the Terms of Use.
     </li>
     <li>
-      <strong>Closed PostgreSQL Direct Ports:</strong> Direct database ports (including default PostgreSQL port 5432)
-      remain
-      strictly closed to the public internet. The desktop client never connects directly to raw database ports.
+      <strong>Legitimate Interests (GDPR Art. 6(1)(f) / KVKK Art. 5(2)(f)):</strong> Processing cryptographic HWID hashes
+      and security logs is necessary for our legitimate commercial interests in software license enforcement, fraud
+      prevention, intellectual property protection, and system security.
     </li>
     <li>
-      <strong>HTTPS / TLS 1.3 &amp; WebSocket Only:</strong> All communications between the desktop client and backend
-      services
-      flow exclusively through encrypted HTTPS endpoints using TLS 1.3 (via PostgREST APIs) and secure WebSockets (WSS
-      channels)
-      for real-time synchronization.
+      <strong>Compliance with Legal Obligations (GDPR Art. 6(1)(c) / KVKK Art. 5(2)(a)):</strong> Retaining licensing
+      transaction records to comply with applicable tax, commercial accounting, and regulatory obligations.
     </li>
     <li>
-      <strong>Immutable Audit Logs (<code>activity_logs</code>):</strong> Critical business operations (such as
-      inventory updates,
-      order lifecycle transitions, role permission modifications, and deletions) are recorded as immutable, append-only
-      entries in
-      the <code>activity_logs</code> table to guarantee traceability, audit compliance, and fraud prevention.
+      <strong>Consent (GDPR Art. 6(1)(a) / KVKK Art. 5(1)):</strong> Where explicit consent is provided by a data
+      subject for specific voluntary support or feedback interactions.
     </li>
   </ul>
 
-  <h2>4. Automated Orphaned Media Cleanup Policy</h2>
+  <h2>4. Technical, Physical &amp; Organizational Security Controls</h2>
   <p>
-    To preserve storage integrity and prevent orphaned data retention, SiriusSync ITS implements an automated media
-    cleanup
-    routine. When an inventory product, financial receipt, or ERP record with cloud attachments is deleted, the
-    corresponding
-    unreferenced image files in Supabase Storage are automatically and permanently purged.
-  </p>
-
-  <h2>5. Third-Party Cloud Infrastructure (Supabase)</h2>
-  <p>
-    SiriusSync ITS utilizes Supabase for database management, PostgREST API handling, Realtime WebSocket
-    synchronization,
-    and cloud object storage. The customer enterprise maintains its own Supabase tenancy or project instance. Data
-    stored within
-    Supabase is governed by the customer&rsquo;s cloud configuration, Row-Level Security (RLS) policies, and
-    Supabase&rsquo;s data
-    processing standards.
-  </p>
-
-  <h2>6. Data Subject Rights (KVKK Article 11 &amp; GDPR Articles 15–22)</h2>
-  <p>
-    In accordance with Turkish KVKK (Law No. 6698, Article 11) and GDPR (Articles 15&ndash;22), individuals whose
-    personal data
-    (such as enterprise user accounts or CRM counterparty details) is processed have the right to:
+    SiriusSync ITS enforces robust multi-layered architectural safeguards to protect enterprise data confidentiality,
+    availability, and integrity:
   </p>
   <ul>
-    <li>Request confirmation as to whether their personal data is being processed and obtain details of such processing;
+    <li>
+      <strong>Zero Telemetry by Design:</strong> Absolutely zero background phone-home mechanisms, no demographic data
+      collection, and no background telemetry.
     </li>
-    <li>Access their personal data and request copies thereof;</li>
-    <li>Request correction or rectification of incomplete or inaccurate personal data;</li>
-    <li>Request erasure, destruction, or anonymization of personal data (&ldquo;right to be forgotten&rdquo;);</li>
-    <li>Request restriction of processing or object to processing;</li>
-    <li>Request data portability, facilitated through built-in Apache POI Excel export and JasperReports PDF generation.
+    <li>
+      <strong>Closed Database Direct Ports:</strong> Direct public database ports (including standard PostgreSQL port
+      5432) remain strictly closed to the public internet. The desktop client never connects directly to raw database
+      ports, shielding your core database against brute-force attacks and network sniffing.
+    </li>
+    <li>
+      <strong>HTTPS / TLS 1.3 &amp; Secure WebSockets Only:</strong> All client-to-backend communications flow
+      exclusively through encrypted HTTPS endpoints utilizing TLS 1.3 (via PostgREST APIs) and authenticated, encrypted
+      WebSocket (WSS) channels for real-time multi-client synchronization.
+    </li>
+    <li>
+      <strong>Client-Side BCrypt Hashing:</strong> Credentials are hashed locally on the user&rsquo;s machine with salted
+      BCrypt (12 rounds) before transmission, ensuring plaintext passwords never touch the network or database.
+    </li>
+    <li>
+      <strong>Immutable Audit Trails (<code>activity_logs</code>):</strong> Critical business events (such as inventory
+      adjustments, order stage transitions, permission modifications, and deletions) are committed to the
+      <code>activity_logs</code> table as immutable, append-only records to guarantee forensic auditability and fraud
+      prevention.
+    </li>
+    <li>
+      <strong>Row-Level Security (RLS):</strong> Granular PostgreSQL Row-Level Security policies ensure data isolation
+      and protect against unauthorized cross-tenant or unauthenticated data manipulation.
+    </li>
+  </ul>
+
+  <h2>5. Automated Orphaned Media Cleanup Policy</h2>
+  <p>
+    To preserve cloud storage integrity, reduce unnecessary data retention, and maintain hygiene, SiriusSync ITS
+    incorporates an automated media cleanup routine. When an inventory item, financial receipt, or ERP record with
+    associated cloud attachments is deleted by an authorized operator, the corresponding unreferenced image and document
+    files in Supabase Object Storage are automatically and permanently purged.
+  </p>
+
+  <h2>6. Third-Party Cloud Infrastructure (Supabase)</h2>
+  <p>
+    SiriusSync ITS interfaces with Supabase for managed PostgreSQL database services, PostgREST API handling, Realtime
+    WebSocket synchronization, and object storage.
+  </p>
+  <p>
+    The customer enterprise establishes and maintains its own dedicated Supabase project instance. All enterprise
+    records and media files stored in Supabase remain subject to the customer&rsquo;s cloud configuration, access keys,
+    and Supabase&rsquo;s data security and compliance standards. The Developer does not possess backdoor access to
+    customer project instances in standard operational use.
+  </p>
+
+  <h2>7. Data Sharing &amp; Third-Party Disclosures</h2>
+  <p>
+    <strong>We do not sell, rent, lease, or monetize your personal or commercial data.</strong> We do not disclose your
+    data to third parties, data brokers, or advertisers. Disclosures are strictly limited to the following circumstances:
+  </p>
+  <ul>
+    <li>
+      <strong>Customer Cloud Infrastructure:</strong> Data transmitted from client workstations is routed directly to the
+      customer&rsquo;s chosen cloud backend (Supabase) for storage and synchronization.
+    </li>
+    <li>
+      <strong>Legal &amp; Regulatory Mandates:</strong> We may disclose data only if required to do so by applicable law,
+      valid court order, regulatory summons, or governmental subpoena issued by a court of competent jurisdiction.
+    </li>
+    <li>
+      <strong>Protection of Rights:</strong> Where necessary to investigate, prevent, or enforce legal action regarding
+      violations of our Terms of Use, intellectual property infringement, or severe security threats.
+    </li>
+  </ul>
+
+  <h2>8. International Data Transfers (GDPR Chapter V &amp; KVKK Article 9)</h2>
+  <p>
+    The customer enterprise selects the geographic hosting region for its Supabase cloud tenancy (such as Frankfurt,
+    London, or other regional data centers). Where cross-border data transfers occur as part of cloud synchronization or
+    support:
+  </p>
+  <ul>
+    <li>
+      Transfers are governed by recognized international transfer mechanisms, including European Commission Standard
+      Contractual Clauses (SCCs), adequacy decisions, or statutory derogations under Article 49 of the GDPR;
+    </li>
+    <li>
+      Under Turkish KVKK (Article 9), cross-border transfers are conducted subject to statutory adequacy approvals,
+      explicit consent, or binding standard undertaking commitments approved by the Personal Data Protection Board.
+    </li>
+  </ul>
+
+  <h2>9. Data Subject Rights (GDPR Articles 15–22 &amp; KVKK Article 11)</h2>
+  <p>
+    Under Turkish KVKK (Law No. 6698, Article 11) and European GDPR (Articles 15&ndash;22), data subjects whose personal
+    data is processed possess the following legal rights:
+  </p>
+  <ul>
+    <li>
+      <strong>Right of Access &amp; Information:</strong> Request confirmation as to whether personal data is processed,
+      and obtain clear details concerning the purposes, categories, and recipients of such data;
+    </li>
+    <li>
+      <strong>Right to Rectification:</strong> Request the correction of incomplete, out-of-date, or inaccurate personal
+      data;
+    </li>
+    <li>
+      <strong>Right to Erasure (&ldquo;Right to be Forgotten&rdquo;):</strong> Request the permanent deletion,
+      destruction, or anonymization of personal data when legal retention grounds expire;
+    </li>
+    <li>
+      <strong>Right to Restriction of Processing:</strong> Request the suspension of processing while the accuracy of
+      data or legitimate interests are contested;
+    </li>
+    <li>
+      <strong>Right to Data Portability:</strong> Request copies of structured personal data in a readable format,
+      facilitated via built-in system tools (including Apache POI Excel export and JasperReports PDF generation);
+    </li>
+    <li>
+      <strong>Right to Object:</strong> Object at any time to data processing carried out under legitimate interest
+      grounds;
+    </li>
+    <li>
+      <strong>Right to Withdraw Consent:</strong> Withdraw consent at any time where processing was founded upon consent;
+    </li>
+    <li>
+      <strong>Right to Lodge a Complaint:</strong> Lodge a complaint with the competent supervisory authority:
+      <ul>
+        <li>In Turkey: Personal Data Protection Authority (Kişisel Verileri Koruma Kurumu &mdash; <a
+            href="https://www.kvkk.gov.tr" target="_blank" rel="noopener noreferrer">kvkk.gov.tr</a>);</li>
+        <li>In the EU/EEA: The competent national Data Protection Authority in your habitual place of residence;</li>
+        <li>In the United Kingdom: The Information Commissioner&rsquo;s Office (ICO &mdash; <a
+            href="https://ico.org.uk" target="_blank" rel="noopener noreferrer">ico.org.uk</a>).</li>
+      </ul>
     </li>
   </ul>
   <p>
-    Because the customer enterprise acts as the Data Controller, data subjects should address requests directly to their
-    organization&rsquo;s
-    designated system administrator. For technical questions regarding software capabilities, contact our support team.
+    Because the customer enterprise acts as the Data Controller for its operational deployment, individual operators and
+    counterparties should submit data subject requests directly to their organization&rsquo;s designated system
+    administrator. For software-level questions, contact our support team.
   </p>
 
-  <h2>7. Data Retention &amp; Portability</h2>
+  <h2>10. Data Retention &amp; Deletion Lifecycle</h2>
   <p>
-    All operational ERP records and account data are retained according to the customer enterprise&rsquo;s internal
-    policies and
-    statutory commercial recordkeeping laws. The customer enterprise retains unencumbered data ownership and may export
-    or delete
-    records at any time using built-in system tools.
+    All operational ERP records, CRM profiles, order histories, and financial logs are retained in accordance with the
+    customer enterprise&rsquo;s internal corporate retention schedules and statutory commercial accounting laws.
+  </p>
+  <p>
+    The customer enterprise retains unencumbered sovereignty to archive, export, or permanently delete its data at any
+    time. When records are purged, unreferenced cloud media files are automatically removed via our automated cleanup
+    routine. Diagnostic support communications held by the Developer are retained only for the duration necessary to
+    resolve the reported inquiry and are thereafter safely archived or deleted.
   </p>
 
-  <h2>8. Changes to this Policy</h2>
+  <h2>11. Children&rsquo;s Privacy</h2>
   <p>
-    We may update this Privacy Policy from time to time to reflect product enhancements or regulatory changes. The
-    latest version
-    is always published on the official portal at <a href="https://coderacjhp.pages.dev/projects/siriussync/"
-      target="_blank" rel="noopener noreferrer">https://coderacjhp.pages.dev/projects/siriussync/</a>
-    with the &ldquo;Last updated&rdquo; timestamp indicated above.
+    SiriusSync ITS is strictly an enterprise business-to-business (B2B) ERP desktop application and is not intended or
+    designed for use by minors or individuals under the age of 18. We do not knowingly collect, process, or solicit
+    personal data from children.
   </p>
 
-  <h2>9. Contact Information</h2>
+  <h2>12. Changes to this Privacy Policy</h2>
   <p>
-    For privacy inquiries, security compliance questions, or technical support:
+    The Developer reserves the right to update this Privacy Policy periodically to reflect technological updates,
+    software enhancements, or regulatory developments. The current version will always be maintained on the official
+    portal at <a href="https://coderacjhp.pages.dev/projects/siriussync/" target="_blank"
+      rel="noopener noreferrer">https://coderacjhp.pages.dev/projects/siriussync/</a>
+    with an updated &ldquo;Last updated&rdquo; timestamp. We encourage administrators to review this page periodically.
+  </p>
+
+  <h2>13. Contact Information &amp; Data Protection Enquiries</h2>
+  <p>
+    For privacy inquiries, technical security assessments, or compliance questions regarding SiriusSync ITS:
   </p>
   <ul>
     <li>Developer Contact: <a href="mailto:hexa.octabin@outlook.com">hexa.octabin@outlook.com</a></li>
@@ -203,9 +305,9 @@
 
   <hr />
   <p class="muted">
-    This document is provided for transparency and informational purposes. It does not constitute formal legal counsel.
+    This document is provided for transparency and contractual clarity. It does not constitute formal legal counsel.
   </p>
-  <p class="muted">
+  <p class="muted doc-footer">
     <a href="terms-of-use.html">Terms of Use</a> &middot;
     <a href="support.html">Support</a> &middot;
     <a href="index.html">Official Portal</a>
