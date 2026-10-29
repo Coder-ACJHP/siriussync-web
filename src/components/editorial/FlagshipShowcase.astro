@@ -15,10 +15,11 @@ const t = {
     siriusSyncTag: 'DESKTOP ERP • v1.5.5',
     siriusSyncDesc:
       'Engineered with JavaFX, modern reactive pipelines, Bcrypt encryption, and Supabase PostgreSQL with strict Row Level Security (RLS). Delivers real-time multi-terminal inventory synchronization, automated purchase and sales order lifecycles (POM/SOM), integrated CRM, and hardware-bound license verification.',
-    standbyTitle: 'StandBy Clock — Minimalist Nightstand Experience',
-    standbyTag: 'NATIVE IOS & SWIFTUI',
+    standbyTitle: 'StandBy Clock — Refined Nightstand & Desk Display',
+    standbyTag: 'NATIVE IOS & IPADOS • CLEAN ARCHITECTURE',
+    standbyFaces: '17+ Curated Clock Faces',
     standbyDesc:
-      'Curated bedside utility featuring 14+ bespoke clock faces, fluid gesture-driven navigation, localized weather data, and low-latency rendering tailored for OLED nightstand ergonomics.',
+      'Curated bedside and desk utility featuring 17+ bespoke clock faces, 72-minute offline sleep audio, real-time GeoJSON solar terminator tracking, and intelligent low-emission OLED nightstand ergonomics.',
   },
   tr: {
     sectionNum: '01 / ÖNE ÇIKAN ÇALIŞMALAR',
@@ -29,10 +30,11 @@ const t = {
     siriusSyncTag: 'MASAÜSTÜ ERP • v1.5.5 CANLI',
     siriusSyncDesc:
       'JavaFX, reaktif veri akışları, Bcrypt şifreleme ve Supabase PostgreSQL (RLS politikaları) ile sıfırdan geliştirildi. Çok terminalli gerçek zamanlı envanter senkronizasyonu, POM/SOM sipariş döngüleri, entegre CRM ve donanım kimlikli (HWID) kurumsal lisans yönetimi sunar.',
-    standbyTitle: 'StandBy Clock — Minimalist Masaüstü Gece Saati',
-    standbyTag: 'NATIVE IOS & SWIFTUI',
+    standbyTitle: 'StandBy Clock — Masaüstü ve Gece Saati Deneyimi',
+    standbyTag: 'NATIVE IOS & IPADOS • CLEAN ARCHITECTURE',
+    standbyFaces: '17+ Özel Saat Teması',
     standbyDesc:
-      'OLED ekran ergonomisi için optimize edilmiş 14’ten fazla özel saat teması, akıcı jest kontrolleri, yerel hava durumu entegrasyonu ve sıfır gecikmeli arayüz deneyimi.',
+      '17’den fazla özel saat teması, 72 dakikalık dahili çevrimdışı uyku sesleri, gerçek zamanlı GeoJSON gündüz/gece güneş sınırı takibi ve OLED ekran korumalı gece ergonomisiyle donatılmış masaüstü saati.',
   },
 }[lang];
 
@@ -106,7 +108,7 @@ const standbyLink = lang === 'en' ? '/works/standby' : '/tr/works/standby';
         <div class="lg:col-span-5">
           <a href={siriusSyncLink} class="block editorial-img-container rounded-2xl border border-zinc-800 bg-zinc-950 p-2 shadow-2xl">
             <img
-              src="/assets/images/siriussync.png"
+              src="/assets/images/siriussync.webp"
               alt="SiriusSync ITS Architecture"
               class="w-full h-auto rounded-xl object-cover object-top"
             />
@@ -117,24 +119,40 @@ const standbyLink = lang === 'en' ? '/works/standby' : '/tr/works/standby';
 
     <!-- Flagship 2: StandBy Clock -->
     <div class="rounded-3xl border border-zinc-800 bg-[#0a0e18] p-6 md:p-10 relative overflow-hidden group glow-card">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        <div class="lg:col-span-5 order-2 lg:order-1">
-          <a href={standbyLink} class="block editorial-img-container rounded-2xl border border-zinc-800 bg-zinc-950 p-2 shadow-2xl">
-            <img
-              src="/assets/images/standby.jpg"
-              alt="StandBy Clock"
-              class="w-full h-auto rounded-xl object-cover object-center"
-            />
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-x-8 gap-y-6 items-stretch">
+        <!-- Left Column: Stacked Images Container (Height dynamically stretched to OLED badge) -->
+        <div class="lg:col-span-5 order-2 lg:order-1 flex flex-col">
+          <a
+            href={standbyLink}
+            class="block relative w-full flex-1 min-h-[340px] rounded-2xl bg-transparent p-3 overflow-hidden flex flex-col items-center justify-start"
+          >
+            <!-- Stack 1 (Top / Stars Constellation) -->
+            <div class="absolute top-[3%] w-[76%] rounded-xl overflow-hidden border border-zinc-700/60 shadow-lg brightness-75 group-hover:top-[1.5%] group-hover:brightness-90 transition-all duration-500 z-10">
+              <img src="/assets/images/standby/stars.webp" alt="Star Constellation" class="w-full aspect-[1344/621] object-cover" loading="lazy" decoding="async" />
+            </div>
+            <!-- Stack 2 (World Map) -->
+            <div class="absolute top-[18%] w-[82%] rounded-xl overflow-hidden border border-zinc-700/70 shadow-xl brightness-85 group-hover:top-[17%] group-hover:brightness-95 transition-all duration-500 z-20">
+              <img src="/assets/images/standby/dottedmap.webp" alt="Dotted World Map" class="w-full aspect-[1344/621] object-cover" loading="lazy" decoding="async" />
+            </div>
+            <!-- Stack 3 (Calendar) -->
+            <div class="absolute top-[33%] w-[88%] rounded-xl overflow-hidden border border-zinc-700/80 shadow-2xl brightness-95 group-hover:top-[34%] group-hover:brightness-100 transition-all duration-500 z-30">
+              <img src="/assets/images/standby/calendar.webp" alt="Calendar & Reminders" class="w-full aspect-[1344/621] object-cover" loading="lazy" decoding="async" />
+            </div>
+            <!-- Stack 4 (Front / Classic Flip Clock) -->
+            <div class="absolute top-[48%] w-[94%] rounded-xl overflow-hidden border border-zinc-700/80 shadow-[0_16px_40px_rgba(0,0,0,0.95)] brightness-100 group-hover:top-[51%] group-hover:border-zinc-500 transition-all duration-500 z-40">
+              <img src="/assets/images/standby/flip.webp" alt="Classic Flip Clock" class="w-full aspect-[1344/621] object-cover" loading="lazy" decoding="async" />
+            </div>
           </a>
         </div>
 
-        <div class="lg:col-span-7 space-y-6 order-1 lg:order-2">
+        <!-- Right Column: Upper Content Block (From Header Badge to OLED Anti-Burn Protection Badge) -->
+        <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
           <div class="flex flex-wrap items-center gap-3">
             <span class="px-3 py-1 rounded-full text-xs font-mono tracking-wider bg-zinc-800 text-cyan-300 font-semibold border border-cyan-500/30">
               {t.standbyTag}
             </span>
             <span class="text-xs font-mono text-zinc-400">
-              +14 Özel Saat Teması
+              {t.standbyFaces}
             </span>
           </div>
 
@@ -148,20 +166,23 @@ const standbyLink = lang === 'en' ? '/works/standby' : '/tr/works/standby';
 
           <div class="flex flex-wrap gap-2 text-xs font-mono text-zinc-300 pt-2">
             <span class="px-3 py-1.5 rounded-lg border border-zinc-700 bg-zinc-900/80">Swift 5.9</span>
-            <span class="px-3 py-1.5 rounded-lg border border-zinc-700 bg-zinc-900/80">SwiftUI</span>
-            <span class="px-3 py-1.5 rounded-lg border border-zinc-700 bg-zinc-900/80">UIKit Animation</span>
-            <span class="px-3 py-1.5 rounded-lg border border-zinc-700 bg-zinc-900/80">CoreLocation</span>
-            <span class="px-3 py-1.5 rounded-lg border border-zinc-700 bg-zinc-900/80">OLED Dark Optimization</span>
+            <span class="px-3 py-1.5 rounded-lg border border-zinc-700 bg-zinc-900/80">Programmatic UIKit</span>
+            <span class="px-3 py-1.5 rounded-lg border border-zinc-700 bg-zinc-900/80">Clean Architecture</span>
+            <span class="px-3 py-1.5 rounded-lg border border-zinc-700 bg-zinc-900/80">AVFoundation & Sleep Audio</span>
+            <span class="px-3 py-1.5 rounded-lg border border-zinc-700 bg-zinc-900/80">CoreLocation & GeoJSON</span>
+            <span class="px-3 py-1.5 rounded-lg border border-zinc-700 bg-zinc-900/80">OLED Anti-Burn Protection</span>
           </div>
+        </div>
 
-          <div class="pt-4">
-            <a
-              href={standbyLink}
-              class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-mono uppercase tracking-wider bg-white hover:bg-zinc-200 text-black shadow-md transition-all font-bold"
-            >
-              <span>{t.caseStudyBtn}</span>
-            </a>
-          </div>
+        <!-- Row 2: CTA Button (Positioned below the OLED badge line) -->
+        <div class="hidden lg:block lg:col-span-5 order-3"></div>
+        <div class="lg:col-span-7 order-3 pt-2">
+          <a
+            href={standbyLink}
+            class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-mono uppercase tracking-wider bg-white hover:bg-zinc-200 text-black shadow-md transition-all font-bold"
+          >
+            <span>{t.caseStudyBtn}</span>
+          </a>
         </div>
       </div>
     </div>

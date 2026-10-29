@@ -103,28 +103,7 @@ export default function ContactBar({ lang = 'en' }: ContactBarProps) {
           <span className="text-xs font-mono uppercase tracking-widest text-zinc-400 font-bold block mb-6">
             {t.verifiedAccounts}
           </span>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {/* Stack Overflow */}
-            <a
-              href="https://stackoverflow.com/users/coder-acjhp"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-5 rounded-2xl border border-zinc-800 bg-[#0a0e18] hover:border-amber-500/50 transition-all group flex flex-col justify-between h-36 glow-card"
-            >
-              <div className="flex justify-between items-start">
-                <span className="text-xs font-mono text-zinc-400">STACK OVERFLOW</span>
-                <ArrowUpRight className="w-4 h-4 text-zinc-400 group-hover:text-amber-400 transition-colors" />
-              </div>
-              <div>
-                <div className="text-lg font-mono font-bold text-white group-hover:text-amber-400 transition-colors">
-                  Coder ACJHP
-                </div>
-                <div className="text-xs text-zinc-400 mt-1 font-mono">
-                  ~2,254 Rep • 1 Gold • 24 Silver
-                </div>
-              </div>
-            </a>
-
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {/* GitHub */}
             <a
               href="https://github.com/Coder-ACJHP"

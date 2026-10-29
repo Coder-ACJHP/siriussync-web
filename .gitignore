@@ -10,4 +10,3 @@ dist/
 .env*
 npm-debug.log*
 
-docs/.agents/teamwork/ORIGINAL_REQUEST.md

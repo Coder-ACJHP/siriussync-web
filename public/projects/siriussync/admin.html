@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
     <title>SiriusSync - Lisans Yönetimi</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -94,8 +95,10 @@
         const STD_MODULES = ["products", "costsheets", "categories", "crm", "exchange_rate"];
         let licensesData = [];
 
+        const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
         window.onload = () => {
-            const savedKey = localStorage.getItem('adminKey');
+            const savedKey = sessionStorage.getItem('adminKey');
             if(savedKey) {
                 document.getElementById('apiKey').value = savedKey;
                 fetchLicenses();
@@ -104,7 +107,7 @@
 
         function getHeaders() {
             const key = document.getElementById('apiKey').value;
-            localStorage.setItem('adminKey', key);
+            sessionStorage.setItem('adminKey', key);
             return { "Content-Type": "application/json", "x-admin-key": key };
         }
 
@@ -154,33 +157,33 @@
                 card.className = "bg-white rounded-lg shadow overflow-hidden";
                 
                 let devicesHTML = devices.map(d => {
-                    const displayModules = d.modules.map(m => STD_MODULES.includes(m) ? `${m} <span class="text-gray-400">(std)</span>` : m).join(', ');
+                    const displayModules = d.modules.map(m => STD_MODULES.includes(m) ? `${esc(m)} <span class="text-gray-400">(std)</span>` : esc(m)).join(', ');
                     
                     return `
                     <div class="flex flex-col md:flex-row items-center justify-between p-4 border-b last:border-0 hover:bg-gray-50 group">
                         <div class="flex-1 mb-3 md:mb-0">
                             <p class="font-bold text-gray-800 flex items-center gap-2">
-                                ${d.ownerName} <span class="text-xs text-gray-500 font-normal">(${d.deviceName || 'Cihaz Adı Yok'})</span>
-                                <button onclick="openEditModal('${d.hwid}')" class="text-gray-400 hover:text-blue-600 transition" title="Düzenle">✏️</button>
+                                ${esc(d.ownerName)} <span class="text-xs text-gray-500 font-normal">(${esc(d.deviceName || 'Cihaz Adı Yok')})</span>
+                                <button data-h="${esc(d.hwid)}" onclick="openEditModal(this.dataset.h)" class="text-gray-400 hover:text-blue-600 transition" title="Düzenle">✏️</button>
                             </p>
-                            <p class="text-xs text-gray-500 font-mono mt-1">${d.hwid}</p>
+                            <p class="text-xs text-gray-500 font-mono mt-1">${esc(d.hwid)}</p>
                             <p class="text-xs mt-1 text-blue-600">${displayModules}</p>
                         </div>
                         <div class="flex items-center gap-3">
                             <label class="inline-flex items-center cursor-pointer">
-                                <input type="checkbox" class="sr-only peer" ${d.isActive ? 'checked' : ''} onchange="toggleStatus('${d.hwid}', ${!d.isActive})">
+                                <input type="checkbox" class="sr-only peer" ${d.isActive ? 'checked' : ''} data-h="${esc(d.hwid)}" onchange="toggleStatus(this.dataset.h, ${!d.isActive})">
                                 <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-500"></div>
                                 <span class="ms-2 text-sm font-medium ${d.isActive ? 'text-green-600' : 'text-gray-500'}">${d.isActive ? 'Aktif' : 'Pasif'}</span>
                             </label>
-                            <button onclick="openModuleModal('${d.hwid}')" class="bg-blue-100 text-blue-700 px-3 py-1 rounded text-sm font-medium hover:bg-blue-200 transition">Modüller</button>
-                            <button onclick="deleteHWID('${d.hwid}')" class="bg-gray-100 text-gray-600 px-3 py-1 rounded text-sm font-medium hover:bg-red-500 hover:text-white transition">Sil</button>
+                            <button data-h="${esc(d.hwid)}" onclick="openModuleModal(this.dataset.h)" class="bg-blue-100 text-blue-700 px-3 py-1 rounded text-sm font-medium hover:bg-blue-200 transition">Modüller</button>
+                            <button data-h="${esc(d.hwid)}" onclick="deleteHWID(this.dataset.h)" class="bg-gray-100 text-gray-600 px-3 py-1 rounded text-sm font-medium hover:bg-red-500 hover:text-white transition">Sil</button>
                         </div>
                     </div>
                 `}).join('');
 
                 card.innerHTML = `
                     <div class="bg-gray-800 text-white px-4 py-3 font-semibold flex justify-between items-center">
-                        <span>🏢 ${companyName}</span>
+                        <span>🏢 ${esc(companyName)}</span>
                         <span class="text-sm bg-gray-600 px-2 py-1 rounded">${devices.length} Cihaz</span>
                     </div>
                     <div>${devicesHTML}</div>

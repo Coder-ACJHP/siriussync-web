@@ -9,13 +9,11 @@ const metrics = {
   en: [
     { label: 'ENGINEERING PRACTICE', value: '11+ Yrs', desc: '8 Yrs Professional • 3 Yrs Freelance', color: 'text-blue-400' },
     { label: 'COMPLETED PROJECTS', value: '20+', desc: 'Mobile, Desktop & Web', color: 'text-cyan-400' },
-    { label: 'STACK OVERFLOW SCORE', value: '~2,254', desc: '1 Gold • 24 Silver • 38 Bronze', color: 'text-amber-400' },
     { label: 'CORE EXPERTISE', value: 'Full-Stack', desc: 'iOS • Java Desktop • Modern Web', color: 'text-emerald-400' },
   ],
   tr: [
     { label: 'MÜHENDİSLİK PRATİĞİ', value: '11+ Yıl', desc: '8 Yıl Profesyonel • 3 Yıl Freelance', color: 'text-blue-400' },
     { label: 'TAMAMLANAN PROJELER', value: '20+', desc: 'Mobil, Masaüstü ve Web', color: 'text-cyan-400' },
-    { label: 'STACK OVERFLOW SKORU', value: '~2.254', desc: '1 Altın • 24 Gümüş • 38 Bronz', color: 'text-amber-400' },
     { label: 'TEMEL UZMANLIK', value: 'Tam Kapsam', desc: 'iOS • Java Masaüstü • Modern Web', color: 'text-emerald-400' },
   ],
 }[lang];
@@ -23,7 +21,7 @@ const metrics = {
 
 <section class="border-b border-blue-500/15 bg-[#0b0f19]">
   <div class="max-w-6xl mx-auto px-6 md:px-12 py-10">
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
       {
         metrics.map((m) => (
           <div class="flex flex-col justify-between p-4 rounded-2xl bg-zinc-900/40 border border-zinc-800/60">

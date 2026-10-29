@@ -19,44 +19,15 @@ const t = {
 }[lang];
 ---
 
-<footer class="py-12 px-6 md:px-12 bg-[#05070b] border-t border-zinc-800/80">
-  <div class="max-w-6xl mx-auto">
-    <div class="flex flex-col md:flex-row items-start md:items-center justify-between pb-8 mb-8 border-b border-zinc-800/60 gap-6">
-      <div>
-        <span class="text-lg font-bold tracking-tight text-white block mb-1">
-          Onur Işık — Coder ACJHP
-        </span>
-        <span class="text-xs font-mono text-zinc-400 uppercase tracking-widest">
-          FREELANCE YAZILIM & KIDEMLİ MÜHENDİSLİK • MOBİL, MASAÜSTÜ & WEB
-        </span>
-      </div>
-
-      <div class="flex items-center gap-6">
-        <a href="https://stackoverflow.com/users/coder-acjhp" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-zinc-400 hover:text-amber-400 transition-colors">
-          Stack Overflow
-        </a>
-        <a href="https://github.com/Coder-ACJHP" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-zinc-400 hover:text-blue-400 transition-colors">
-          GitHub
-        </a>
-        <a href="https://bionluk.com/coderacjhp" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-zinc-400 hover:text-cyan-400 transition-colors">
-          Bionluk
-        </a>
-        <a href="https://www.linkedin.com/in/bilal-khalid-mohammed-ameen-70663212b/" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-zinc-400 hover:text-indigo-400 transition-colors">
-          LinkedIn
-        </a>
-      </div>
-
-      <a
-        href="#"
-        class="text-xs font-mono tracking-widest text-zinc-400 hover:text-white transition-colors"
-      >
-        {t.backToTop}
-      </a>
-    </div>
-
-    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between text-xs font-mono text-zinc-400 gap-3">
-      <span>{t.copyNotice}</span>
-      <span class="text-cyan-400 font-medium">{t.subNotice}</span>
-    </div>
+<footer class="py-8 px-6 md:px-12 bg-[#05070b] border-t border-zinc-800/80">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-zinc-400 gap-4">
+    <span>{t.copyNotice}</span>
+    <span class="text-cyan-400 font-medium">{t.subNotice}</span>
+    <a
+      href="#"
+      class="tracking-widest text-zinc-400 hover:text-white transition-colors"
+    >
+      {t.backToTop}
+    </a>
   </div>
 </footer>

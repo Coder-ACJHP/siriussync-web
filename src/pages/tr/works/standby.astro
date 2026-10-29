@@ -2,13 +2,25 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Header from '../../../components/editorial/Header.astro';
 import Footer from '../../../components/editorial/Footer.astro';
-import { ArrowLeft, Clock, Moon, ArrowUpRight } from 'lucide-react';
+import CircularCarousel from '../../../components/editorial/CircularCarousel';
+import { ArrowLeft, Clock, Moon, ArrowUpRight, Music, Globe } from 'lucide-react';
+
+const carouselImages = [
+  { src: '/assets/images/standby/flip.webp', alt: 'Classic Flip Clock' },
+  { src: '/assets/images/standby/dottedmap.webp', alt: 'Dotted World Map' },
+  { src: '/assets/images/standby/calendar.webp', alt: 'Calendar & Reminders' },
+  { src: '/assets/images/standby/stars.webp', alt: 'Star Constellation' },
+  { src: '/assets/images/standby/photos.webp', alt: 'Photos Clock' },
+  { src: '/assets/images/standby/butterflies.webp', alt: 'Butterflies' },
+  { src: '/assets/images/standby/western.webp', alt: 'Country Western' },
+  { src: '/assets/images/standby/gradient.webp', alt: 'Gradient Float' },
+];
 ---
 
 <BaseLayout
   lang="tr"
-  title="StandBy Clock — Native iOS Vitrin | Onur Işık"
-  description="StandBy Clock: SwiftUI ve UIKit ile geliştirilmiş, 14+ özel arayüze sahip minimalist masaüstü gece saati."
+  title="StandBy Clock — Native iOS & iPadOS Vitrin | Onur Işık"
+  description="StandBy Clock - Night Display: 17+ özel saat yüzü, 72 dakikalık çevrimdışı uyku sesleri ve Clean Architecture UIKit mimarisine sahip masaüstü ve komodin saati."
 >
   <Header lang="tr" currentSlug="standby" />
 
@@ -23,13 +35,13 @@ import { ArrowLeft, Clock, Moon, ArrowUpRight } from 'lucide-react';
       <!-- Case Study Hero -->
       <div class="mb-12">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-cyan-500/10 border border-cyan-500/25 text-cyan-400 font-semibold uppercase tracking-wider mb-6">
-          <span>NATIVE IOS UYGULAMASI • 14+ TEMA</span>
+          <span>NATIVE IOS & IPADOS UYGULAMASI • 17+ TEMA • v1.2.4</span>
         </div>
         <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-tight mb-6">
-          StandBy Clock: Komodin İçin Minimalist Ergonomi
+          StandBy Clock: Masaüstü İçin Minimalist Ergonomik Saat
         </h1>
         <p class="text-lg md:text-xl text-zinc-300 font-normal max-w-3xl leading-relaxed">
-          Cihazınızı dikkat dağıtmayan, şık bir masaüstü ve gece saatine dönüştürmek için tasarlandı. Native SwiftUI ve düşük güç tüketimli render algoritmaları üzerine kurulu.
+          iPhone ve iPad cihazınızı dikkat dağıtmayan, seçkin ve estetik bir masaüstü/gece saatine dönüştürür. 17+ farklı temasıyla, her saate özel renk paletiyle ve düşük güç tüketimli render algoritmaları sayesinde cihazınızı şarja takma zorunluğu olmadan masaüstü saatine çevirin.
         </p>
       </div>
 
@@ -37,29 +49,34 @@ import { ArrowLeft, Clock, Moon, ArrowUpRight } from 'lucide-react';
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-6 rounded-2xl border border-zinc-800 bg-[#0c121e] mb-12 text-xs font-mono">
         <div>
           <span class="text-zinc-400 uppercase block mb-1">ARAYÜZLER</span>
-          <span class="text-white font-bold">14+ Özel Saat Teması</span>
+          <span class="text-white font-bold">17+ Özel Saat Teması</span>
         </div>
         <div>
-          <span class="text-zinc-400 uppercase block mb-1">TEKNOLOJİ</span>
-          <span class="text-cyan-400 font-bold">SwiftUI & UIKit</span>
+          <span class="text-zinc-400 uppercase block mb-1">MİMARİ & TEKNOLOJİ</span>
+          <span class="text-cyan-400 font-bold">Programmatic UIKit</span>
         </div>
         <div>
-          <span class="text-zinc-400 uppercase block mb-1">OPTİMİZASYON</span>
-          <span class="text-blue-400 font-bold">OLED Düşük Güç Gece Modu</span>
+          <span class="text-zinc-400 uppercase block mb-1">UYKU VE SES</span>
+          <span class="text-blue-400 font-bold">72 dk Çevrimdışı Müzik</span>
         </div>
         <div>
-          <span class="text-zinc-400 uppercase block mb-1">OTOMASYON</span>
-          <span class="text-white font-bold">Fastlane CI/CD</span>
+          <span class="text-zinc-400 uppercase block mb-1">APP STORE</span>
+          <span class="text-white font-bold">$1.99 • iOS 17.0+</span>
         </div>
       </div>
 
       <!-- Hero Image -->
-      <div class="rounded-3xl border border-zinc-800 overflow-hidden bg-zinc-950 p-3 mb-16 shadow-2xl">
+      <div class="rounded-3xl border border-zinc-800 overflow-hidden bg-zinc-950 p-3 mb-8 shadow-2xl">
         <img
-          src="/assets/images/standby.jpg"
+          src="/assets/images/standby.webp"
           alt="StandBy Clock Görünümü"
           class="w-full h-auto rounded-2xl object-cover"
         />
+      </div>
+
+      <!-- Circular 3D Carousel Showcase (Pure Visual, No Sub-Text) -->
+      <div class="mb-16">
+        <CircularCarousel client:visible images={carouselImages} />
       </div>
 
       <!-- Details -->
@@ -70,15 +87,15 @@ import { ArrowLeft, Clock, Moon, ArrowUpRight } from 'lucide-react';
             Sıfır Parlama, Saf İşlevsellik
           </h2>
           <p class="text-sm sm:text-base text-zinc-300 font-normal leading-relaxed mb-6">
-            StandBy Clock, gereksiz bildirim kirliliğini ortadan kaldırarak ekranı en saf haline getirir. Gözü yormayan ultra-kırmızı gece modu sayesinde karanlıkta uykuyu bölmeden saati ve ortam verilerini kontrol etme imkanı tanır.
+            StandBy Clock, gereksiz bildirim kirliliğini ortadan kaldırarak ekranı en saf haline getirir. <code class="text-cyan-400 bg-zinc-900 px-1.5 py-0.5 rounded font-mono text-xs">DeviceScreenManager</code> ile yönetilen akıllı karartma sayesinde uygulama aktifken ekran kapanma zamanlayıcısı devreden çıkar; uygulama arka plana alındığı veya kapatıldığı anda kullanıcının orijinal parlaklık ve otomatik kilit ayarları eksiksiz geri yüklenir.
           </p>
         </section>
 
         <!-- Features Grid -->
         <section class="border-t border-zinc-800 pt-12">
-          <span class="text-xs font-mono uppercase tracking-widest text-blue-400 font-bold block mb-3">02 / ÇEKİRDEK MİMARİ</span>
+          <span class="text-xs font-mono uppercase tracking-widest text-blue-400 font-bold block mb-3">02 / ÇEKİRDEK YETENEKLER & MİMARİ</span>
           <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white mb-8">
-            Hassas Mühendislik
+            Hassas Mühendislik & Clean Architecture
           </h2>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -86,19 +103,39 @@ import { ArrowLeft, Clock, Moon, ArrowUpRight } from 'lucide-react';
               <div class="w-10 h-10 rounded-xl border border-cyan-500/30 flex items-center justify-center bg-cyan-500/10 text-cyan-400">
                 <Clock className="w-5 h-5 text-cyan-400" />
               </div>
-              <h3 class="text-lg font-mono font-bold text-white">14+ Tipografik Düzen</h3>
+              <h3 class="text-lg font-mono font-bold text-white">17+ Seçkin Saat Arayüzü</h3>
               <p class="text-xs text-zinc-300 font-normal leading-relaxed">
-                Retro mekanik kapaklı saatlerden modern mimari rakamlara kadar her arayüz ekran boyutuna milimetrik olarak uyum sağlar.
+                Mekanik yaprak saat (Flip Clock) animasyonundan noktalı dünya haritasına, takımyıldızlardan Ken Burns efektli fotoğraflara ve EventKit hatırlatıcılı takvim ekranına kadar zengin koleksiyon. Factory ve <code class="text-zinc-400 font-mono text-[11px]">ClockTimeSourceProtocol</code> ile senkronize yönetim.
               </p>
             </div>
 
             <div class="p-6 rounded-2xl border border-zinc-800 bg-[#0c121e] space-y-3">
               <div class="w-10 h-10 rounded-xl border border-blue-500/30 flex items-center justify-center bg-blue-500/10 text-blue-400">
-                <Moon className="w-5 h-5 text-blue-400" />
+                <Music className="w-5 h-5 text-blue-400" />
+              </div>
+              <h3 class="text-lg font-mono font-bold text-white">72 Dk Çevrimdışı Uyku Sesleri</h3>
+              <p class="text-xs text-zinc-300 font-normal leading-relaxed">
+                İnternet bağlantısı gerektirmeyen hazır dinlendirici ambient müzikler. Ayrıca Apple Music arşivinden kişisel parçaları içe aktarma, arka planda çalma ve Kilit Ekranı/Denetim Merkezi entegrasyonu.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-2xl border border-zinc-800 bg-[#0c121e] space-y-3">
+              <div class="w-10 h-10 rounded-xl border border-indigo-500/30 flex items-center justify-center bg-indigo-500/10 text-indigo-400">
+                <Globe className="w-5 h-5 text-indigo-400" />
+              </div>
+              <h3 class="text-lg font-mono font-bold text-white">Gündüz/Gece Güneş Sınırı ve Hava</h3>
+              <p class="text-xs text-zinc-300 font-normal leading-relaxed">
+                GeoJSON tabanlı noktalı dünya haritası üzerinde gün ışığı hareketini anlık hesaplayan terminatör çizgisi, CoreLocation konum tespiti ve Open-Meteo ile yerel hava durumu gösterimi.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-2xl border border-zinc-800 bg-[#0c121e] space-y-3">
+              <div class="w-10 h-10 rounded-xl border border-emerald-500/30 flex items-center justify-center bg-emerald-500/10 text-emerald-400">
+                <Moon className="w-5 h-5 text-emerald-400" />
               </div>
               <h3 class="text-lg font-mono font-bold text-white">OLED Yanma Koruması</h3>
               <p class="text-xs text-zinc-300 font-normal leading-relaxed">
-                Gözle fark edilmeyen mikro piksel kaydırmaları, telefon tüm gece standda kaldığında ekran panelinin ömrünü korur.
+                Cihaz tüm gece stand üzerinde açık kaldığında ekran panelinin ömrünü korumak için fark edilmeyen periyodik mikro piksel kaydırmaları ve düşük emisyonlu gece renk paletleri.
               </p>
             </div>
           </div>
@@ -112,15 +149,15 @@ import { ArrowLeft, Clock, Moon, ArrowUpRight } from 'lucide-react';
                 APP STORE YAYINI
               </span>
               <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
-                StandBy Clock'u iOS'ta Deneyimleyin
+                StandBy Clock'u iOS & iPadOS'ta Deneyimleyin
               </h3>
               <p class="text-xs sm:text-sm text-zinc-300 font-normal max-w-xl">
-                iOS 16 ve üzeri destekleyen iPhone modelleriyle tam uyumlu. Otomatik yatay konum algılama desteği mevcuttur.
+                Tek seferlik satın alma ($1.99), abonelik veya takip içermez. iOS 17.0 ve üzeri yüklü iPhone ve iPad modelleriyle tam uyumludur.
               </p>
             </div>
 
             <a
-              href="https://apps.apple.com/developer/onur-isik"
+              href="https://apps.apple.com/us/app/standby-clock-night-display/id6766165559"
               target="_blank"
               rel="noopener noreferrer"
               class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-xs font-mono uppercase tracking-wider bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-600/30 transition-all font-bold shrink-0"
